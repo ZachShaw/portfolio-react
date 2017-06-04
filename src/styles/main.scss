@@ -1,0 +1,29 @@
+@import 'base';
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  background: linear-gradient(
+      rgba(41, 44, 44, 0.85), 
+      rgba(41, 41, 41, 0.85)
+    ), url('../assets/background-2.jpg');
+  background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

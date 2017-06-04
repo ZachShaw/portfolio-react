@@ -1,0 +1,32 @@
+.navbar-wrapper {
+    position: absolute;
+    z-index:9999999999;
+    padding: 20px;
+    right: 0;
+    width: 400px;
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        a {
+            width: 33.333%;
+            max-width: 120px; // required for nav indicator 
+            text-align: center;
+        }
+    }
+
+    .indicator-wrapper {
+        position: relative;
+        width: 100%;
+
+        .indicator {
+            width: 5px;
+            height: 5px;
+            border-radius: 50px;
+            position: absolute;
+            background-color: white;
+            transition: all 0.3s ease;
+            // left: calc(33.3% - 60px); // 60px is 50% of a nav item
+        }
+    }
+}
