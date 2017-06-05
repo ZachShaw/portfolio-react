@@ -22,9 +22,8 @@ class Navbar extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.props)
-    var index = navItems.findIndex(item => item.href == this.props.pathname);
-    let item = navItems[index + 1].id;
+    var index = navItems.findIndex(item => item.href === this.props.pathname);
+    let item = navItems[index].id;
     this.toggleActiveNav(item);
   }
 
@@ -33,7 +32,6 @@ class Navbar extends React.Component {
     this.state = {
       navOffset: offset.toFixed(2)
     };
-    console.log('PROPS', this.state)
   }
     
   render() {
