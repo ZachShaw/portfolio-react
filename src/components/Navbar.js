@@ -1,62 +1,57 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
+import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
-// const navItems = [
-//   { title: 'home', href: '/', id: 1 },
-//   { title: 'counter', href: '/counter', id: 2 },
-//   { title: 'projects', href: '/counter', id: 3 }
-// ];
+const navItems = [
+  { title: 'home', href: '/', id: 1 },
+  { title: 'counter', href: '/counter', id: 2 },
+  { title: 'projects', href: '/projects', id: 3 }
+];
 
-// work out % of each item, depending on total amount of items in the nav.
+const widthPercent = 100 / navItems.length;
 
-
-const defaultOffset = '33.333%';
+const mapStateToProps = (state) => ({
+   pathname: state.location.pathname
+})
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      navOffset: defaultOffset
-    };
+    this.toggleActiveNav = this.toggleActiveNav.bind(this);
+  }
+
+  componentWillMount() {
+    console.log(this.props)
+    var index = navItems.findIndex(item => item.href == this.props.pathname);
+    let item = navItems[index + 1].id;
+    this.toggleActiveNav(item);
   }
 
    toggleActiveNav(itemId) {
-    let offset = defaultOffset;
-
-    if (itemId === 2) {
-      offset = '66.666%'
-    } else if (itemId === 3) {
-      offset = '99.999%'
-    }
-
-    this.setState({
-      navOffset: offset
-    });
+    let  offset = widthPercent * itemId
+    this.state = {
+      navOffset: offset.toFixed(2)
+    };
+    console.log('PROPS', this.state)
   }
     
   render() {
-
-    // this.props.location.pathname
-    // pathname.includes('projects') && ...
-
-    const {
-      navOffset
-    } = this.state;
-    console.log('YOOO ', this.state);
   
     return (
       <div className="navbar-wrapper">
         <div className="links">
           {/*<IndexLink to='/' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav('home')}>Home</IndexLink> */}
-          <Link to='/' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav(1)}>home</Link>
-          <Link to='/counter' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav(2)}>counter</Link>
-          <Link to='/projects' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav(3)}>projects</Link>
+          {
+            navItems.map((item) => {
+              return <Link to={item.href} activeClassName='page-layout__nav-item--active' key={item.id} onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
+            })
+          }
         </div>
         <div className="indicator-wrapper">
           <div className="indicator" 
                style={{
-                 left: `calc(${navOffset} - 60px)`
+                 left: `calc(${this.state.navOffset}% - 60px)`
                }}
           />
         </div>
@@ -65,4 +60,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar
+export default connect(mapStateToProps, null)(Navbar)
