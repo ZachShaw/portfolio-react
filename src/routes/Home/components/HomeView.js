@@ -7,9 +7,9 @@ export const HomeView = () => (
     <h1>Zach Shaw</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <div className="btn-container">
-      <button>Enter</button>
-      <button>Enter</button>
-      <button>Enter</button>
+      <button>Projects</button>
+      <button>About</button>
+      <button>Contact</button>
     </div>
     
   </div>

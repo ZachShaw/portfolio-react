@@ -20,7 +20,7 @@ class ProjectsWrap extends React.Component {
       <ul className="projects-wrapper">
       {
         this.state.projects.map((p) => {
-          return <Project key={p.id} project={p}/>
+          return <Project key={p.key} project={p}/>
         })
       }
     </ul>
