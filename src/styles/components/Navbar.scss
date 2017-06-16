@@ -12,19 +12,31 @@
             width: 33.333%;
             max-width: 120px; // required for nav indicator 
             text-align: center;
+            text-decoration: none;
+            color: #bdbdbd;
+            font-family: 'Lato', sans-serif;
+            // text-transform: uppercase;
+            font-size: 15px;
+            color: #1E1E1E;
+            transition: all 0.3s ease;
+            &:hover {
+                color: #ffffff;
+            }
+            // font-weight: 500;
         }
     }
 
     .indicator-wrapper {
         position: relative;
         width: 100%;
+        padding-top: 5px;
 
         .indicator {
             width: 5px;
             height: 5px;
             border-radius: 50px;
             position: absolute;
-            background-color: white;
+            background-color: #7F8181;
             transition: all 0.3s ease;
             // left: calc(33.3% - 60px); // 60px is 50% of a nav item
         }

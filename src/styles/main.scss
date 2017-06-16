@@ -1,5 +1,6 @@
 @import 'base';
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Lato|Permanent+Marker');
 
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
@@ -16,8 +17,8 @@ body {
 
 .background {
   background: linear-gradient(
-      rgba(41, 44, 44, 0.85), 
-      rgba(41, 41, 41, 0.85)
+      rgba(171, 175, 175, 0.85),
+      rgba(4, 4, 4, 0.85)
     ), url('../assets/background-2.jpg');
   background-size: cover;
 }

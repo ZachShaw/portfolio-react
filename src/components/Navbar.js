@@ -4,9 +4,11 @@ import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
 const navItems = [
-  { title: 'home', href: '/', id: 1 },
-  { title: 'counter', href: '/counter', id: 2 },
-  { title: 'projects', href: '/projects', id: 3 }
+  { title: 'Home', href: '/', id: 1 },
+  { title: 'Counter', href: '/counter', id: 2 },
+  { title: 'Projects', href: '/projects', id: 3 },
+  { title: 'About', href: '/about', id: 4},
+  { title: 'Contact', href: '/contact', id: 5}
 ];
 
 const widthPercent = 100 / navItems.length;
@@ -42,14 +44,16 @@ class Navbar extends React.Component {
           {/*<IndexLink to='/' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav('home')}>Home</IndexLink> */}
           {
             navItems.map((item) => {
-              return <Link to={item.href} activeClassName='page-layout__nav-item--active' key={item.id} onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
+              if (item.id !== 2) {
+                return <Link to={item.href} key={item.id} onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
+              } 
             })
           }
         </div>
         <div className="indicator-wrapper">
           <div className="indicator" 
                style={{
-                 left: `calc(${this.state.navOffset}% - 60px)`
+                 left: `calc(${this.state.navOffset}% - 62px)`
                }}
           />
         </div>

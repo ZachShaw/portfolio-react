@@ -1,0 +1,58 @@
+[
+    {
+        "key": 1,
+        "title": "Health Coach Customer",
+        "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle.",
+        "framework": ["AngularJS", "D3"],
+        "api": "RESTful",
+        "externalLinks": null
+    },
+    {
+        "key": 2,
+        "title": "Health Coach Signup",
+        "description": "Customer facing app that allowed customers to book an appointment with their local pharmacist to enroll on the health coach program.",
+        "framework": ["AngularJS"],
+        "api": "RESTful",
+        "externalLinks": null
+    },
+    {
+        "key": 3,
+        "title": "Health Coach Colleague",
+        "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach.",
+        "framework": ["AngularJS"],
+        "api": "RESTful",
+        "externalLinks": null
+    },
+    {
+        "key": 4,
+        "title": "Beautiful You",
+        "description": "SPA used by customers on large touch panels to browse and purchase targeted products based on the users interactions with the application.",
+        "framework": ["AngularJS"],
+        "api": "JSON",
+        "externalLinks": null
+    },
+    {
+        "key": 5,
+        "title": "PwC Digital Fitness Assessment",
+        "description": "SPA designed to help companies idenfity employees strengths and weaknessess on the path to digital success. Through engaging cards, users are guided through a step by step series of questions and videos to test their knowledge.",
+        "framework": ["AngularJS 1.6"],
+        "api": "RESTful",
+        "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html"
+    },
+    {
+        "key": 5,
+        "title": "PwC Investigate!",
+        "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The game includes question based interviews, interactive phones, email client plus more to help users identify and accuse suspects of commiting fraudulent activities.",
+        "framework": ["AngularJS 1.6", "Redux", "D3"],
+        "api": "JSON",
+        "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html"
+    },
+    {
+        "key": 5,
+        "title": "Totem CMS",
+        "description": "CMS used internally and by specific customers to manage, curate and update new content in the app employee engagement app Totem.",
+        "framework": ["AngularJS 1.6", "Redux", "D3"],
+        "api": "RESTful",
+        "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html"
+    }
+]
