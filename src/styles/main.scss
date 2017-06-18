@@ -10,6 +10,10 @@ html {
   overflow-x: hidden;
 }
 
+p {
+  font-size: 14px;
+}
+
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -28,7 +32,7 @@ body {
 
 .background {
   background: linear-gradient(
-      rgba(171, 175, 175, 0.85),
+      #1E2023,
       rgba(4, 4, 4, 0.85)
     ), url('../assets/background-2.jpg');
   background-size: cover;

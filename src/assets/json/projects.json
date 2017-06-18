@@ -21,7 +21,7 @@
         "key": 3,
         "title": "Health Coach Colleague",
         "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach.",
-        "framework": ["AngularJS 1.5", "SASS", "ES6"],
+        "framework": ["AngularJS 1.5", "SASS", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-colleague"
