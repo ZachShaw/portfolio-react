@@ -1,9 +1,8 @@
 .projects-container {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     padding-top: 100px;
     width: 80%;
-    border: 1px solid #fff;
 }

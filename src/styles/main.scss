@@ -1,6 +1,10 @@
 @import 'base';
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Lato|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+
+
 
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
@@ -12,6 +16,14 @@ html {
 
 p {
   font-size: 14px;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+h2, h3, h4, h5, h6, p, span, a, button {
+  font-family: 'Roboto Mono', monospace;
 }
 
 ::-webkit-scrollbar {
@@ -32,8 +44,8 @@ body {
 
 .background {
   background: linear-gradient(
-      #1E2023,
-      rgba(4, 4, 4, 0.85)
+      rgba(30, 32, 35, 1),
+      rgba(30, 32, 35, 0.9)
     ), url('../assets/background-2.jpg');
   background-size: cover;
 }

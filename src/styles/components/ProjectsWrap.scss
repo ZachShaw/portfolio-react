@@ -4,3 +4,10 @@ ul {
         list-style-type: none;
         justify-content: flex-start;     
 }
+
+a {
+        text-decoration: none;
+        &:hover {
+                text-decoration: none;
+        }
+}

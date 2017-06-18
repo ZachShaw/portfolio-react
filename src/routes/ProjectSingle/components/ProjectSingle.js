@@ -36,9 +36,10 @@ class ProjectSingle extends React.Component {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      width: "100px",
+      width: "120px",
       color: "#fff",
-      fontSize: "12px"
+      fontSize: "12px",
+      margin: '0 10px'
     }
 
     let projectSingle = {
@@ -57,7 +58,7 @@ class ProjectSingle extends React.Component {
             this.currentProject.framework.map((framework) => {
               return (
                 <div style={frameworkSingle} key={this.currentProject.framework.indexOf(framework)}>
-                  {framework}
+                  <span>{framework}</span>
                 </div>
               )
             })
