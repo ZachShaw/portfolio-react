@@ -15,7 +15,7 @@ class Project extends React.Component {
     return (
       <Link to={`/projects/${this.props.project.url}`}>
         <li className="project">
-          <h4>{this.props.project.title}</h4>
+          <h5>{this.props.project.title}</h5>
         </li>
       </Link>
     )

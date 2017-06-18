@@ -1,6 +1,18 @@
 .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1 0 199px;
     max-width: 199px;
+    width: 199px;
     height: 200px;
     border: 2px solid rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

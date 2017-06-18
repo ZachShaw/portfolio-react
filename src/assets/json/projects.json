@@ -3,7 +3,7 @@
         "key": 1,
         "title": "Health Coach Customer",
         "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle.",
-        "framework": ["AngularJS 1.5", "D3"],
+        "framework": ["AngularJS 1.5", "D3", "SASS", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-customer"
@@ -12,7 +12,7 @@
         "key": 2,
         "title": "Health Coach Signup",
         "description": "Customer facing app that allowed customers to book an appointment with their local pharmacist to enroll on the health coach program.",
-        "framework": ["AngularJS 1.5"],
+        "framework": ["AngularJS 1.5", "SASS", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-signup"
@@ -21,7 +21,7 @@
         "key": 3,
         "title": "Health Coach Colleague",
         "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach.",
-        "framework": ["AngularJS 1.5"],
+        "framework": ["AngularJS 1.5", "SASS", "ES6"],
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-colleague"
@@ -30,7 +30,7 @@
         "key": 4,
         "title": "Beautiful You",
         "description": "SPA used by customers on large touch panels to browse and purchase targeted products based on the users interactions with the application.",
-        "framework": ["AngularJS 1.5"],
+        "framework": ["AngularJS 1.5", "SASS", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "JSON",
         "externalLinks": null,
         "url": "beautifulyou"
@@ -39,7 +39,7 @@
         "key": 5,
         "title": "PwC Digital Fitness Assessment",
         "description": "SPA designed to help companies idenfity employees strengths and weaknessess on the path to digital success. Through engaging cards, users are guided through a step by step series of questions and videos to test their knowledge.",
-        "framework": ["AngularJS 1.5"],
+        "framework": ["AngularJS 1.5", "D3", "SASS", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "dfa"
@@ -48,7 +48,7 @@
         "key": 6,
         "title": "PwC Investigate!",
         "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The game includes question based interviews, interactive phones, email client plus more to help users identify and accuse suspects of commiting fraudulent activities.",
-        "framework": ["AngularJS 1.6", "Redux", "D3"],
+        "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "investigate"
@@ -57,7 +57,7 @@
         "key": 7,
         "title": "Totem CMS",
         "description": "CMS used internally and by specific customers to manage, curate and update new content in the app employee engagement app Totem.",
-        "framework": ["AngularJS 1.6", "Redux", "D3"],
+        "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "totemcms"
@@ -66,7 +66,7 @@
         "key": 8,
         "title": "Totem TV",
         "description": "App showing live feed of posts from multiple teams using Totem. Intended for uses at special events and conferences to engage the audience and encourage use of Totem on mobile.",
-        "framework": ["React", "Redux"],
+        "framework": ["React", "Redux", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
         "url": "totemtv"
@@ -75,7 +75,7 @@
         "key": 9,
         "title": "Totem",
         "description": "The main source of information relating to the Totem App allowing clients to register their interest in the app and book an onboarding session.",
-        "framework": ["AngularJS 1.6"],
+        "framework": ["AngularJS 1.6", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "https://www.totem.team",
         "url": "totem"
@@ -84,7 +84,7 @@
         "key": 10,
         "title": "Play",
         "description": "Static site for Play Consulting",
-        "framework": ["React"],
+        "framework": ["React", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": "https://www.play-consult.co.uk",
         "url": "play"
@@ -93,7 +93,7 @@
         "key": 11,
         "title": "Plantstove",
         "description": "More information coming soon",
-        "framework": ["AngularJS 1.6"],
+        "framework": ["AngularJS 1.6", "Redux", "ES6", "Javascript", "Webpack", "Stylus"],
         "api": "RESTful",
         "externalLinks": "https://www.plantstove.com",
         "url": "plantstove"

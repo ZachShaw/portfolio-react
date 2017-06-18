@@ -2,6 +2,5 @@ ul {
         display: flex;
         flex-flow: row wrap;
         list-style-type: none;
-        justify-content: center;
-        margin: 0 -0.7rem;      
+        justify-content: flex-start;     
 }
