@@ -47,7 +47,6 @@ class Navbar extends React.Component {
     return (
       <div className="navbar-wrapper">
         <div className="links">
-          {/*<IndexLink to='/' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav('home')}>Home</IndexLink> */}
           {
             navItems.map((item) => {
               if (this.hideNavElements(item.id)) {

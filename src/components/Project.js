@@ -13,9 +13,11 @@ class Project extends React.Component {
   render() {
     
     return (
-      <li className="project">
-        <h4>{this.props.project.title}</h4>
-      </li>
+      <Link to={`/projects/${this.props.project.url}`}>
+        <li className="project">
+          <h4>{this.props.project.title}</h4>
+        </li>
+      </Link>
     )
   }
 }
