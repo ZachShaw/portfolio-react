@@ -5,6 +5,7 @@ import CounterRoute from './Counter'
 import ProjectsRoute from './Projects'
 import AboutRoute from './About'
 import ContactRoute from './Contact'
+import ProjectSingleRoute from './ProjectSingle'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -17,7 +18,8 @@ export const createRoutes = (store) => ({
     CounterRoute(store),
     ProjectsRoute(store),
     AboutRoute(store),
-    ContactRoute(store)
+    ContactRoute(store),
+    ProjectSingleRoute(store)
   ]
 })
 

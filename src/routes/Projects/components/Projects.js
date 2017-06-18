@@ -1,3 +1,7 @@
+// Make this a component
+// onComponentWillMount() get location pathName
+// require JSON and get the project from the id in pathname
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Projects.scss'

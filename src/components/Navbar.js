@@ -8,7 +8,8 @@ const navItems = [
   { title: 'Counter', href: '/counter', id: 2 },
   { title: 'Projects', href: '/projects', id: 3 },
   { title: 'About', href: '/about', id: 4},
-  { title: 'Contact', href: '/contact', id: 5}
+  { title: 'Contact', href: '/contact', id: 5},
+  { title: 'ProjectSingle', href: '/project/', id: 6},
 ];
 
 const widthPercent = 100 / navItems.length;
@@ -24,7 +25,7 @@ class Navbar extends React.Component {
   }
 
   componentWillMount() {
-    var index = navItems.findIndex(item => item.href === this.props.pathname);
+    var index = navItems.findIndex(item => item.href === this.props.pathname || this.props.pathname.includes(item.href));
     let item = navItems[index].id;
     this.toggleActiveNav(item);
   }
@@ -35,6 +36,11 @@ class Navbar extends React.Component {
       navOffset: offset.toFixed(2)
     };
   }
+
+  hideNavElements(id) {
+    let hideIds = [2, 5, 6]
+    return hideIds.indexOf(id) > -1 ? false : true;
+  }
     
   render() {
     
@@ -44,7 +50,7 @@ class Navbar extends React.Component {
           {/*<IndexLink to='/' activeClassName='page-layout__nav-item--active' onClick={() => this.toggleActiveNav('home')}>Home</IndexLink> */}
           {
             navItems.map((item) => {
-              if (item.id !== 2) {
+              if (this.hideNavElements(item.id)) {
                 return <Link to={item.href} key={item.id} onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
               } 
             })
