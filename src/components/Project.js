@@ -22,12 +22,17 @@ class Project extends React.Component {
     
     return (
       <Link to={`/projects/${this.props.project.url}`}>
-        <li className="project">
-          <h6>{this.props.project.title}</h6>
-          <div>
-            {this.framework()}
+       <div className="project-container">
+          <div className="project">
+            <div className="topFlip">
+              {this.props.project.title}
+              {this.framework()}
+            </div>
+            <div className="bottomFlop">
+              <p>Find out more</p>
+            </div>
           </div>
-        </li>
+        </div>
       </Link>
     )
   }

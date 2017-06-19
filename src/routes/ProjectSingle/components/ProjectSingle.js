@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import './ProjectSingle.scss'
 
 const mapStateToProps = (state) => ({
    pathname: state.location.pathname
@@ -43,15 +44,17 @@ class ProjectSingle extends React.Component {
     }
 
     let projectSingle = {
+      height: '80vh',
       display: "flex",
       flexDirection: "column",
-      alignItems: "center"
+      alignItems: "center",
+      justifyContent: "space-around"
     }
 
     return (
       <div style={projectSingle}>
         <div style={image}></div>
-        <h1>{this.currentProject.title}</h1>
+        <h3>{this.currentProject.title}</h3>
         <p>{this.currentProject.description}</p>
         <div style={frameworks}>
           {

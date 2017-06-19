@@ -3,14 +3,16 @@ import { Link, IndexLink } from 'react-router';
 import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
-const navItems = [
+const navParentItems = [
   { title: 'Zach Shaw', href: '/', id: 1 },
   { title: 'Projects', href: '/projects', id: 2 },
   { title: 'Experience', href: '/about', id: 3},
   { title: 'Contact', href: '/contact', id: 4},
 ];
 
-const widthPercent = 100 / navItems.length;
+const PROJECTS_NAV_ITEM_ID = 2;
+
+const widthPercent = 100 / navParentItems.length;
 
 const mapStateToProps = (state) => ({
    pathname: state.location.pathname
@@ -19,33 +21,45 @@ const mapStateToProps = (state) => ({
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleActiveNav = this.toggleActiveNav.bind(this);
+    this.toggleNavOffset = this.toggleNavOffset.bind(this);
   }
 
   componentWillMount() {
-    var index = navItems.findIndex(item => item.href === this.props.pathname);
-    let item = navItems[index].id;
-    this.toggleActiveNav(item);
+    const pathname = this.props.pathname;
+    // get nav item id and toggle nav offset
+    const index = navParentItems.findIndex(item => {
+      if (item.href === pathname ||
+          item.href.includes('projects')) {
+        return item;
+      }
+    });
+    let item = navParentItems[index].id;
+    this.toggleNavOffset(item);
+  }
+  
+   toggleNavOffset(itemId) {
+    let  offset = widthPercent * itemId
+    this.setState({
+      navOffset: offset.toFixed(2)
+    });
   }
 
-   toggleActiveNav(itemId) {
-    let  offset = widthPercent * itemId
-    this.state = {
-      navOffset: offset.toFixed(2)
-    };
-  }
-    
   render() {
-    
+    const singleProjectActive = this.props.pathname.includes('projects');
     return (
       <div className="navbar-wrapper">
         <div className="links">
           {
-            navItems.map((item) => {
+            navParentItems.map((item) => {
               return item.href !== '/' ?
-                <Link to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
+                <Link to={item.href} 
+                      key={item.id} 
+                      activeClassName="active" 
+                      className={(singleProjectActive && item.id === PROJECTS_NAV_ITEM_ID) && 'active-child'} 
+                      onClick={() => this.toggleNavOffset(item.id)}>{item.title}
+                </Link>
                 :
-                <IndexLink to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleActiveNav(item.id)}>{item.title}</IndexLink>
+                <IndexLink to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleNavOffset(item.id)}>{item.title}</IndexLink>
             })
           }
         </div>
