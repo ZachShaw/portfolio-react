@@ -28,12 +28,15 @@ class Navbar extends React.Component {
     const pathname = this.props.pathname;
     // get nav item id and toggle nav offset
     const index = navParentItems.findIndex(item => {
-      if (item.href === pathname ||
-          item.href.includes('projects')) {
+      if (item.href === pathname) {
         return item;
       }
     });
-    let item = navParentItems[index].id;
+    if (index === -1 && pathname.includes('projects')) {
+      var item = navParentItems[1].id;
+    } else {
+      var item = navParentItems[index].id;
+    }
     this.toggleNavOffset(item);
   }
   

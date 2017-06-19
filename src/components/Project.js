@@ -29,7 +29,9 @@ class Project extends React.Component {
               {this.framework()}
             </div>
             <div className="bottomFlop">
-              <p>Find out more</p>
+              <div>
+                <p>Find out more</p>
+              </div>
             </div>
           </div>
         </div>
