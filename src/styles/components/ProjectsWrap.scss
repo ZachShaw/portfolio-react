@@ -2,7 +2,8 @@ ul {
         display: flex;
         flex-flow: row wrap;
         list-style-type: none;
-        justify-content: flex-start;     
+        justify-content: flex-start;
+        padding: 0;     
 }
 
 a {

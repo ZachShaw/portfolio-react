@@ -9,13 +9,24 @@ class Project extends React.Component {
 
   componentWillMount() {
   }
+
+  framework() {
+    if (this.props.project.framework.includes('React')) {
+      return <img className="fw-logo" src={require(`../assets/images/react.svg`)} />
+    } else if (this.props.project.framework.includes('AngularJS 1.5') || this.props.project.framework.includes('AngularJS 1.6')) {
+      return <img className="fw-logo" src={require(`../assets/images/angular.png`)} />
+    }
+  }
     
   render() {
     
     return (
       <Link to={`/projects/${this.props.project.url}`}>
         <li className="project">
-          <h5>{this.props.project.title}</h5>
+          <h6>{this.props.project.title}</h6>
+          <div>
+            {this.framework()}
+          </div>
         </li>
       </Link>
     )

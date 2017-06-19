@@ -2,19 +2,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex: 1 0 199px;
     text-align: center;
     max-width: 279px;
     width: 279px;
-    height: 200px;
+    height: 180px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 0 0;
+    transition: all 0.35s ease;
+
+    &:hover {
+        background-color: #fff;
+        
+        h6 {
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
     
-    a {
+    h6 {
         text-decoration: none;
+        color: white;
         &:hover {
             text-decoration: none;
         }
+    }
+    .fw-logo {
+        height: 20px;
+        width: auto;
     }
 }

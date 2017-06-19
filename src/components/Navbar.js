@@ -4,12 +4,10 @@ import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
 const navItems = [
-  { title: 'Home', href: '/', id: 1 },
-  { title: 'Counter', href: '/counter', id: 2 },
-  { title: 'Projects', href: '/projects', id: 3 },
-  { title: 'About', href: '/about', id: 4},
-  { title: 'Contact', href: '/contact', id: 5},
-  { title: 'ProjectSingle', href: '/project/', id: 6},
+  { title: 'Zach Shaw', href: '/', id: 1 },
+  { title: 'Projects', href: '/projects', id: 2 },
+  { title: 'Experience', href: '/about', id: 3},
+  { title: 'Contact', href: '/contact', id: 4},
 ];
 
 const widthPercent = 100 / navItems.length;
@@ -25,7 +23,7 @@ class Navbar extends React.Component {
   }
 
   componentWillMount() {
-    var index = navItems.findIndex(item => item.href === this.props.pathname || this.props.pathname.includes(item.href));
+    var index = navItems.findIndex(item => item.href === this.props.pathname);
     let item = navItems[index].id;
     this.toggleActiveNav(item);
   }
@@ -36,11 +34,6 @@ class Navbar extends React.Component {
       navOffset: offset.toFixed(2)
     };
   }
-
-  hideNavElements(id) {
-    let hideIds = [2, 5, 6]
-    return hideIds.indexOf(id) > -1 ? false : true;
-  }
     
   render() {
     
@@ -49,16 +42,17 @@ class Navbar extends React.Component {
         <div className="links">
           {
             navItems.map((item) => {
-              if (this.hideNavElements(item.id)) {
-                return <Link to={item.href} key={item.id} onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
-              } 
+              return item.href !== '/' ?
+                <Link to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleActiveNav(item.id)}>{item.title}</Link>
+                :
+                <IndexLink to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleActiveNav(item.id)}>{item.title}</IndexLink>
             })
           }
         </div>
         <div className="indicator-wrapper">
           <div className="indicator" 
                style={{
-                 left: `calc(${this.state.navOffset}% - 62px)`
+                 left: `calc(${this.state.navOffset}% - 69px)`
                }}
           />
         </div>
