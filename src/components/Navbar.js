@@ -3,6 +3,9 @@ import { Link, IndexLink } from 'react-router';
 import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
+// TODO This is almost done, just needs to be disabled when on landing page and enabled + rendered on displaying 
+// any other route.
+
 const navParentItems = [
   { title: 'Projects', href: '/projects', id: 1 },
   { title: 'Experience', href: '/about', id: 2},
