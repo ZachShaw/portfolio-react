@@ -9,7 +9,7 @@ import ProjectsWrap from '../../../components/ProjectsWrap';
 
 export const Projects = ({}) => (
   <div className="projects-container">
-    <h2>Projects</h2>
+    <h2 className="headerFadeIn">Projects</h2>
     <ProjectsWrap />
   </div>
 )

@@ -1,3 +1,55 @@
 .experience-wrapper {
     margin: 50px 0;
 }
+
+@keyframes animated {
+   0% { opacity: 0 }
+  20% { opacity: 1 } /* 20% of 5 seconds = 1 second */
+  80% { opacity: 1 }
+  100% { opacity: 1 }
+}
+ 
+.animated {
+  opacity: 0;
+  animation: animated ease-in-out 5s;
+  animation-fill-mode: forwards;
+}
+
+@mixin animationDelay($seconds){
+  animation-delay: $seconds + s;
+}
+
+.animated-1 { @include animationDelay(.25); }
+.animated-2 { @include animationDelay(.5); }
+.animated-3 { @include animationDelay(.75); }
+.animated-4 { @include animationDelay(1); }
+
+// .experience.animated {
+//   /*opacity: 1;*/
+//   animation-name: fadeInDown;
+//   animation-duration: 3s;
+//   animation-fill-mode: forwards;
+// }
+// .experience.animated:nth-child(1) {
+//   animation-delay: 0.5s;
+// }
+// .experience.animated:nth-child(2) {
+//   animation-delay: 1s;
+// }
+// .experience.animated:nth-child(3) {
+//   animation-delay: 2s;
+// }
+// .experience.animated:nth-child(4) {
+//   animation-delay: 3s;
+// }
+
+// @keyframes fadeInDown {
+//   from {
+//     opacity: 0;
+//     transform: translate3d(0, -40%, 0);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: none;
+//   }
+// }
