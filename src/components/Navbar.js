@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import '../styles/components/Navbar.scss';
 
 // TODO This is almost done, just needs to be disabled when on landing page and enabled + rendered on displaying
@@ -89,7 +89,7 @@ class Navbar extends React.Component {
             />
           </div>
         </div>
-      </div>
+    </div>
     )
   }
 }

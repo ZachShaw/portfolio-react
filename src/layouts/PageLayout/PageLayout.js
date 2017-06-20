@@ -2,6 +2,7 @@ import React from 'react'
 import { IndexLink, Link } from 'react-router'
 import PropTypes from 'prop-types'
 import Navbar from '../../components/Navbar'
+import { CSSTransitionGroup } from 'react-transition-group';
 import './PageLayout.scss'
 
 export const PageLayout = ({ children, location }) => {
@@ -12,7 +13,12 @@ export const PageLayout = ({ children, location }) => {
   }
   return (
     <div>
-      {displayNav()}
+      <CSSTransitionGroup
+        transitionName="example"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}>
+        {displayNav()}
+      </CSSTransitionGroup>
       <div className='container text-center'>
         <div className='page-layout__viewport'>
           {children}
