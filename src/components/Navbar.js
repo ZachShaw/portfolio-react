@@ -3,7 +3,7 @@ import { Link, IndexLink } from 'react-router';
 import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
-// TODO This is almost done, just needs to be disabled when on landing page and enabled + rendered on displaying 
+// TODO This is almost done, just needs to be disabled when on landing page and enabled + rendered on displaying
 // any other route.
 
 const navParentItems = [
@@ -27,7 +27,7 @@ class Navbar extends React.Component {
   }
 
   componentWillMount() {
-    const pathname = this.props.pathname;
+    const pathname = this.props.location.pathname;
     // get nav item id and toggle nav offset
     const index = navParentItems.findIndex(item => {
       if (item.href === pathname) {
@@ -41,7 +41,7 @@ class Navbar extends React.Component {
     }
     this.toggleNavOffset(item);
   }
-  
+
    toggleNavOffset(itemId) {
     let  offset = widthPercent * itemId
     this.setState({
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
   }
 
   iconInitials() {
-      if (this.props.pathname !== '/') {
+      if (this.props.location.pathname !== '/') {
         return (
           <Link to='/'>
             <div className="navbar-title">
@@ -62,7 +62,7 @@ class Navbar extends React.Component {
     }
 
   render() {
-    const singleProjectActive = this.props.pathname.includes('projects');
+    const singleProjectActive = this.props.location.pathname.includes('projects');
     return (
       <div>
         {this.iconInitials()}
@@ -71,10 +71,10 @@ class Navbar extends React.Component {
             {
               navParentItems.map((item) => {
                 return (
-                  <Link to={item.href} 
-                      key={item.id} 
-                      activeClassName="active" 
-                      className={(singleProjectActive && item.id === PROJECTS_NAV_ITEM_ID) && 'active-child'} 
+                  <Link to={item.href}
+                      key={item.id}
+                      activeClassName="active"
+                      className={(singleProjectActive && item.id === PROJECTS_NAV_ITEM_ID) && 'active-child'}
                       onClick={() => this.toggleNavOffset(item.id)}>{item.title}
                   </Link>
                 )
@@ -82,7 +82,7 @@ class Navbar extends React.Component {
             }
           </div>
           <div className="indicator-wrapper">
-            <div className="indicator" 
+            <div className="indicator"
                 style={{
                   left: `calc(${this.state.navOffset}% - 95px)`
                 }}
