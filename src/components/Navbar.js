@@ -4,13 +4,12 @@ import { connect } from 'react-redux'
 import '../styles/components/Navbar.scss';
 
 const navParentItems = [
-  { title: 'Zach Shaw', href: '/', id: 1 },
-  { title: 'Projects', href: '/projects', id: 2 },
-  { title: 'Experience', href: '/about', id: 3},
-  { title: 'Contact', href: '/contact', id: 4},
+  { title: 'Projects', href: '/projects', id: 1 },
+  { title: 'Experience', href: '/about', id: 2},
+  { title: 'Contact', href: '/contact', id: 3},
 ];
 
-const PROJECTS_NAV_ITEM_ID = 2;
+const PROJECTS_NAV_ITEM_ID = 1;
 
 const widthPercent = 100 / navParentItems.length;
 
@@ -33,7 +32,7 @@ class Navbar extends React.Component {
       }
     });
     if (index === -1 && pathname.includes('projects')) {
-      var item = navParentItems[1].id;
+      var item = navParentItems[0].id;
     } else {
       var item = navParentItems[index].id;
     }
@@ -47,31 +46,45 @@ class Navbar extends React.Component {
     });
   }
 
+  iconInitials() {
+      if (this.props.pathname !== '/') {
+        return (
+          <Link to='/'>
+            <div className="navbar-title">
+              <h1>ZS</h1>
+            </div>
+          </Link>
+        )
+      }
+    }
+
   render() {
     const singleProjectActive = this.props.pathname.includes('projects');
     return (
-      <div className="navbar-wrapper">
-        <div className="links">
-          {
-            navParentItems.map((item) => {
-              return item.href !== '/' ?
-                <Link to={item.href} 
+      <div>
+        {this.iconInitials()}
+        <div className="navbar-wrapper">
+          <div className="links">
+            {
+              navParentItems.map((item) => {
+                return (
+                  <Link to={item.href} 
                       key={item.id} 
                       activeClassName="active" 
                       className={(singleProjectActive && item.id === PROJECTS_NAV_ITEM_ID) && 'active-child'} 
                       onClick={() => this.toggleNavOffset(item.id)}>{item.title}
-                </Link>
-                :
-                <IndexLink to={item.href} key={item.id} activeClassName="active" onClick={() => this.toggleNavOffset(item.id)}>{item.title}</IndexLink>
-            })
-          }
-        </div>
-        <div className="indicator-wrapper">
-          <div className="indicator" 
-               style={{
-                 left: `calc(${this.state.navOffset}% - 69px)`
-               }}
-          />
+                  </Link>
+                )
+              })
+            }
+          </div>
+          <div className="indicator-wrapper">
+            <div className="indicator" 
+                style={{
+                  left: `calc(${this.state.navOffset}% - 95px)`
+                }}
+            />
+          </div>
         </div>
       </div>
     )

@@ -9,11 +9,11 @@ export const HomeView = () => (
       <h1>Zach Shaw</h1>
       <h4>Front End Engineer</h4>
       <p>Stack: React, AngularJS, Redux, Javascript (ES6), jQuery, webpack, gulp, grunt, Sass, Less, Stylus, yarn, bower, npm, webpack, Chai, AWS, Semaphore CI, Google Analytics, JIRA, Confluence, Material UI, Bootstrap</p>
-      {/*<div className="btn-container">
+      <div className="btn-container">
         <Link to="/projects"><button>Projects</button></Link>
         <Link to="/about"><button>Experience</button></Link>
         <button>Contact</button>
-      </div> */}
+      </div>
     </div>  
   </div>
 )

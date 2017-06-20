@@ -26,6 +26,13 @@ h2, h3, h4, h5, h6, p, span, a, button {
   font-family: 'Roboto Mono', monospace;
 }
 
+a {
+  text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
