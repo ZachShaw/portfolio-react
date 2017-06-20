@@ -21,7 +21,7 @@ class Project extends React.Component {
   render() {
     
     return (
-      <Link to={`/projects/${this.props.project.url}`}>
+      <Link className="project-flip" to={`/projects/${this.props.project.url}`}>
        <div className="project-container">
           <div className="project">
             <div className="topFlip">
