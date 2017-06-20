@@ -52,15 +52,15 @@ class ProjectSingle extends React.Component {
     }
 
     return (
-      <div style={projectSingle}>
-        <div style={image}></div>
+      <div className="project-single">
+        <div className="image"></div>
         <h3>{this.currentProject.title}</h3>
         <p>{this.currentProject.description}</p>
-        <div style={frameworks}>
+        <div className="frameworks">
           {
             this.currentProject.framework.map((framework) => {
               return (
-                <div style={frameworkSingle} key={this.currentProject.framework.indexOf(framework)}>
+                <div className="framework-single" key={this.currentProject.framework.indexOf(framework)}>
                   <span>{framework}</span>
                 </div>
               )
