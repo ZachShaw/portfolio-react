@@ -3,15 +3,13 @@ import { Link, IndexLink } from 'react-router';
 import { connect } from 'react-redux';
 import '../styles/components/Navbar.scss';
 
-// TODO This is almost done, just needs to be disabled when on landing page and enabled + rendered on displaying
-// any other route.
-
 const navParentItems = [
   { title: 'Projects', href: '/projects', id: 1 },
   { title: 'Experience', href: '/about', id: 2},
   { title: 'Contact', href: '/contact', id: 3},
 ];
 
+// This needs updating whenever there is a change to navParentItems
 const PROJECTS_NAV_ITEM_ID = 1;
 
 const widthPercent = 100 / navParentItems.length;
@@ -74,6 +72,7 @@ class Navbar extends React.Component {
                   <Link to={item.href}
                       key={item.id}
                       activeClassName="active"
+                      style={{ width: `${widthPercent}%`}}
                       className={(singleProjectActive && item.id === PROJECTS_NAV_ITEM_ID) && 'active-child'}
                       onClick={() => this.toggleNavOffset(item.id)}>{item.title}
                   </Link>

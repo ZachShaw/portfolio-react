@@ -14,7 +14,7 @@ export const PageLayout = ({ children, location }) => {
   return (
     <div>
       <CSSTransitionGroup
-        transitionName="example"
+        transitionName="navbar"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={300}>
         {displayNav()}
