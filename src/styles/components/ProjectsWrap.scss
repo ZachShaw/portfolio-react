@@ -3,8 +3,8 @@
         flex-flow: row wrap;
         list-style-type: none;
         justify-content: flex-start;
-        padding: 0;  
-        margin-bottom: 50px;   
+        padding: 0;
+        margin-bottom: 50px;
 }
 
 a {
@@ -14,28 +14,28 @@ a {
         }
 }
 
-@-webkit-keyframes flip { 
+@-webkit-keyframes flip {
     0% {
-        -webkit-transform: rotateX(-180deg);
-        transform: rotateX(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
         opacity: 0;
     }
     100% {
-        -webkit-transform: rotateX(0deg);
-        transform: rotateX(0deg);
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
         opacity: 1;
     }
 }
-@keyframes flip { 
+@keyframes flip {
     0% {
-        transform: rotateX(-180deg);
+        transform: rotateY(-180deg);
         opacity: 0;
     }
     60% {
         opacity: 0.5;
     }
     100% {
-        transform: rotateX(0deg);
+        transform: rotateY(0deg);
         opacity: 1;
     }
 }
@@ -57,10 +57,10 @@ a {
         animation-timing-function: ease;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
-        
+
         // Loop through the items and add some delay.
-      @for $i from 1 through 20 {
-          &:nth-child(#{$i}) { 
+      @for $i from 1 through 11 {
+          &:nth-child(#{$i}) {
              -webkit-animation-delay: (0.1s * $i);
             -moz-animation-delay: (0.1s * $i);
             animation-delay: (0.1s * $i);
