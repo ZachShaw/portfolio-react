@@ -49,6 +49,10 @@ body {
   height: 100%;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .background {
   background: linear-gradient(
       rgba(30, 32, 35, 1),

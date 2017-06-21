@@ -4,7 +4,7 @@ import './About.scss'
 
 export const About = ({}) => {
   return (
-    <div style={{ margin: '0 auto', paddingTop: '100px' }} >
+    <div className="experience-container">
       <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">Experience</h2>
       <div className="animated animated-1 experience-wrapper">
         <h5>Front End Engineer</h5>
@@ -21,7 +21,7 @@ export const About = ({}) => {
       <div className="animated animated-3 experience-wrapper">
         <h5>Digital Engineer</h5>
         <p>Where: Betalab (Boots UK), April 2015 - November 2015</p>
-        <p>Role: Re-engineering order and collect from conception to production, scoping digital solutions that were fit for purpose with a focus on improving CX. Research on the latest technologies, integration between enterprise systems and 3rd party API's,workflows, option analysis, UX and architecture.
+        <p>Role: Re-engineering order and collect from conception to production, scoping digital solutions that were fit for purpose with a focus on improving CX. Research on the latest technologies, integration between enterprise systems and 3rd party API's, workflows, option analysis, UX and architecture.
         </p>
       </div>
       <div className="animated animated-4 experience-wrapper">

@@ -17,9 +17,9 @@ class Project extends React.Component {
       return <img className="fw-logo" src={require(`../assets/images/angular.png`)} />
     }
   }
-    
+
   render() {
-    
+
     return (
       <Link className="project-flip" to={`/projects/${this.props.project.url}`}>
        <div className="project-container">

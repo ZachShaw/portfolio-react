@@ -14,28 +14,32 @@ a {
         }
 }
 
-@-webkit-keyframes flip {
+@-webkit-keyframes projectFade {
     0% {
-        -webkit-transform: rotateY(-180deg);
-        transform: rotateY(-180deg);
+        // -webkit-transform: rotateY(-180deg);
+        // transform: rotateY(-180deg);
         opacity: 0;
     }
+    // 60% {
+    //     opacity: 0.5;
+    // }
+
     100% {
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
+        // -webkit-transform: rotateY(0deg);
+        // transform: rotateY(0deg);
         opacity: 1;
     }
 }
-@keyframes flip {
+@keyframes projectFade {
     0% {
-        transform: rotateY(-180deg);
+        // transform: rotateY(-180deg);
         opacity: 0;
     }
-    60% {
-        opacity: 0.5;
-    }
+    // 60% {
+    //     opacity: 0.5;
+    // }
     100% {
-        transform: rotateY(0deg);
+        // transform: rotateY(0deg);
         opacity: 1;
     }
 }
@@ -47,10 +51,10 @@ a {
         transform-style: preserve-3d;
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
-        -webkit-animation-name: flip;
-        animation-name: flip;
-        -webkit-animation-duration: 0.85s;
-        animation-duration: 0.85s;
+        -webkit-animation-name: projectFade;
+        animation-name: projectFade;
+        -webkit-animation-duration: 0.45s;
+        animation-duration: 0.45s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
         -webkit-animation-timing-function: ease;

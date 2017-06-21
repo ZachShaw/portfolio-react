@@ -1,5 +1,13 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
 .experience-wrapper {
-    margin: 50px 0;
+    margin: 20px 0;
+    width: 70%;
 }
 
 @keyframes animated {

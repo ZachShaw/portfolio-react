@@ -18,43 +18,12 @@ class ProjectSingle extends React.Component {
   componentWillMount() {
     this.currentProject = this.state.projects.find(project => project.url === this.props.params.url)
   }
-    
+
   render() {
-    let image = {
-      height: "300px",
-      width: "500px",
-      backgroundColor: "rgba(255, 255, 255, 0.8)"
-    }
-
-    let frameworks = {
-      display: "flex",
-      justifyContent: "space-around",
-    }
-
-    let frameworkSingle = {
-      border: "1px solid #fff",
-      height: "40px",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "120px",
-      color: "#fff",
-      fontSize: "12px",
-      margin: '0 10px'
-    }
-
-    let projectSingle = {
-      height: '80vh',
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "space-around"
-    }
-
     return (
       <div className="project-single">
+        <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">{this.currentProject.title}</h2>
         <div className="image"></div>
-        <h3>{this.currentProject.title}</h3>
         <p>{this.currentProject.description}</p>
         <div className="frameworks">
           {
