@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router';
 import './ProjectSingle.scss'
 
 const mapStateToProps = (state) => ({
@@ -22,6 +23,9 @@ class ProjectSingle extends React.Component {
   render() {
     return (
       <div className="project-single">
+        <Link to="/projects">
+          <img className="back" src={require(`../../../assets/images/arrow-left.svg`)} />
+        </Link>
         <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">{this.currentProject.title}</h2>
         <div className="image"></div>
         <p>{this.currentProject.description}</p>
