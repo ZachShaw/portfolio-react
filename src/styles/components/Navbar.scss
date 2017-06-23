@@ -1,5 +1,15 @@
-.navbar-title {
+.navbar-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
+    top: 0px;
+    z-index: 9999999999;
+}
+
+.navbar-title {
+    // position: fixed;
     left: 0;
     padding: 20px;
     color: #fff;
@@ -11,8 +21,7 @@
 }
 
 .navbar-wrapper {
-    position: fixed;
-    z-index: 9999999999;
+    // position: fixed;
     padding: 20px;
     right: 0;
     width: 595px;

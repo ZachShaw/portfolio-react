@@ -62,7 +62,7 @@ class Navbar extends React.Component {
   render() {
     const singleProjectActive = this.props.location.pathname.includes('projects');
     return (
-      <div>
+      <div className="navbar-container">
         {this.iconInitials()}
         <div className="navbar-wrapper">
           <div className="links">
@@ -84,11 +84,11 @@ class Navbar extends React.Component {
             <div className="indicator"
                 style={{
                   left: `calc(${this.state.navOffset}% - 95px)`
-                }}
-            />
+                }}>
+            </div>
           </div>
         </div>
-    </div>
+      </div>
     )
   }
 }
