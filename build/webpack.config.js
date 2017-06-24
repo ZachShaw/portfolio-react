@@ -130,7 +130,15 @@ config.module.rules.push({
             inProjectSrc('styles'),
           ],
         },
-      }
+      },
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          resources: [
+            inProjectSrc('styles/breakpoints.scss')
+          ]
+        },
+      },
     ],
   })
 })

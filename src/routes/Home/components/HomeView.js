@@ -12,7 +12,7 @@ export const HomeView = () => (
       <div className="btn-container">
         <Link to="/projects"><button>Projects</button></Link>
         <Link to="/about"><button>Experience</button></Link>
-        <button>Contact</button>
+        <Link to="/contact"><button>Contact</button></Link>
       </div>
     </div>
   </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import './styles/main.scss'
-import './styles/animations.scss'
 
 // Store Initialization
 // ------------------------------------

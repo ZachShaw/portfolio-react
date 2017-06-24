@@ -7,6 +7,10 @@
     width: 100%;
     margin-bottom: 100px;
 
+    @include media('<phone') {
+        align-items: center;
+    }
+
     h2 {
         margin-bottom: 20px;
     }

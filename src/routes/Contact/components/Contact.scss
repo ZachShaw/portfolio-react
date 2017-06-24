@@ -1,0 +1,40 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 100px;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        align-items: flex-end;
+        margin: 20px 0;
+        
+        p {
+            margin: 0 0 16px 20px;
+        }
+
+        .img-email {
+            height: 50px;
+            width: auto;
+        }
+
+        .coffee-wrapper {
+            height: 70px;
+            width: 52px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img-coffee {
+                height: 86px;
+                width: auto;
+            }
+        }
+    }
+}

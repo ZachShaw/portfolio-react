@@ -5,6 +5,10 @@
         justify-content: flex-start;
         padding: 0;
         margin-bottom: 50px;
+
+        @include media('<phone') {
+            justify-content: center;
+        }
 }
 
 a {
