@@ -22,6 +22,7 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.toggleNavOffset = this.toggleNavOffset.bind(this);
+    this.onClickToggleNav =this.onClickToggleNav.bind(this);
   }
 
   componentWillMount() {
@@ -38,6 +39,8 @@ class Navbar extends React.Component {
       var item = navParentItems[index].id;
     }
     this.toggleNavOffset(item);
+
+    this.toggleMobileNav = false;
   }
 
    toggleNavOffset(itemId) {
@@ -45,6 +48,28 @@ class Navbar extends React.Component {
     this.setState({
       navOffset: offset.toFixed(2)
     });
+  }
+
+  onClickToggleNav() {
+    if (this.toggleMobileNav) {
+      this.toggleMobileNav = !this.toggleMobileNav;
+      this.setState({
+        navMbContainer: {
+          height: '35px',
+          width: '35px'
+        }
+      })
+    } else {
+      this.toggleMobileNav = !this.toggleMobileNav;
+      this.setState({
+        navMbContainer: {
+          height: '300px',
+          width: '180px',
+          transition: 'width 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1), height 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1)',
+          WebkitTransition: 'width 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1), height 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1)'
+        }
+      })
+    }
   }
 
   iconInitials() {
@@ -64,7 +89,7 @@ class Navbar extends React.Component {
     return (
       <div className="navbar-container">
         {this.iconInitials()}
-        <div className="navbar-wrapper">
+        <div className="navbar-desktop-wrapper">
           <div className="links">
             {
               navParentItems.map((item) => {
@@ -86,6 +111,13 @@ class Navbar extends React.Component {
                   left: `calc(${this.state.navOffset}% - 95px)`
                 }}>
             </div>
+          </div>
+        </div>
+        <div className="navbar-mobile-wrapper">
+          <div onClick={()=> this.onClickToggleNav()} className="nav-mb-box" style={
+            this.state.navMbContainer
+          }>
+            <span>X</span>
           </div>
         </div>
       </div>
