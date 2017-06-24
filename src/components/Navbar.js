@@ -118,6 +118,17 @@ class Navbar extends React.Component {
             this.state.navMbContainer
           }>
             <span>X</span>
+            {
+              navParentItems.map((item) => {
+                return (
+                  <Link to={item.href}
+                      key={item.id}>
+                      {item.title}
+                  </Link>
+                )
+              })
+            }
+            <h2></h2>
           </div>
         </div>
       </div>
