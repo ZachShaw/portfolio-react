@@ -9,6 +9,10 @@
         padding-top: 70px;
     }
 
+    @include media('<phone') {
+        padding-top: 50px;
+    }
+
     h2 {
         margin-bottom: 30px;
     }

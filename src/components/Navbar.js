@@ -64,7 +64,7 @@ class Navbar extends React.Component {
         navMbContainer: {
           height: '250px',
           width: '190px',
-          border: '1px solid #fff',
+          border: '1px solid rgb(101, 102, 104)',
           WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
           msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
         },
