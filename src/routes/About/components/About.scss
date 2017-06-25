@@ -8,6 +8,10 @@
 .experience-wrapper {
     margin: 20px 0;
     width: 70%;
+
+    @include media('<desktop') {
+        width: 100%;
+    }
 }
 
 @keyframes animated {
