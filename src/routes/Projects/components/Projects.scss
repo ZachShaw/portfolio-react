@@ -11,6 +11,10 @@
         align-items: flex-start;
     }
 
+    @include media('height<landscape') {
+        padding-top: 70px;
+    }
+
     h2 {
         margin-bottom: 20px;
     }

@@ -5,6 +5,10 @@
   justify-content: center;
   color: #fff;
   text-align: left;
+
+  @include media('height<landscape') {
+      padding-top: 2rem;
+  }
 }
 
 .page-layout__nav-item--active {

@@ -39,8 +39,6 @@ class Navbar extends React.Component {
       var item = navParentItems[index].id;
     }
     this.toggleNavOffset(item);
-
-    this.toggleMobileNav = false;
   }
 
    toggleNavOffset(itemId) {
@@ -51,18 +49,17 @@ class Navbar extends React.Component {
   }
 
   onClickToggleNav() {
-    if (this.toggleMobileNav) {
-      this.toggleMobileNav = !this.toggleMobileNav;
+    if (this.state.toggleMobileNav) {
       this.setState({
         navMbContainer: {
           height: '0px',
           width: '0px',
           WebkitTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)',
           msTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)'
-        }
+        },
+        toggleMobileNav: false
       })
     } else {
-      this.toggleMobileNav = !this.toggleMobileNav;
       this.setState({
         navMbContainer: {
           height: '250px',
@@ -70,7 +67,8 @@ class Navbar extends React.Component {
           border: '1px solid #fff',
           WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
           msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
-        }
+        },
+        toggleMobileNav: true
       })
     }
   }
@@ -88,11 +86,11 @@ class Navbar extends React.Component {
   }
 
   toggleNavItems() {
-    return this.toggleMobileNav ? 'mb-active' : 'mb-inactive'
+    return this.state.toggleMobileNav ? 'mb-active' : 'mb-inactive'
   }
 
   toggleBurger() {
-    return this.toggleMobileNav ? 'hamburger-is-active' : ''
+    return this.state.toggleMobileNav ? 'hamburger-is-active' : ''
   }
 
   render() {
@@ -126,7 +124,7 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          { this.toggleMobileNav && 
+          { toggleMobileNav && 
             <div onClick={()=> this.onClickToggleNav()} className="overlay"></div>
           }
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
@@ -143,6 +141,7 @@ class Navbar extends React.Component {
                 return (
                   <Link to={item.href}
                       key={item.id}
+                      activeClassName="mb-underline"
                       onClick={()=> this.onClickToggleNav()}
                       className={this.toggleNavItems()}>
                       <div>{item.title}</div>
@@ -150,6 +149,7 @@ class Navbar extends React.Component {
                 )
               })
             }
+            <div className="nav-mb-fill"></div>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-$breakpoints: (phone: 640px, 
+$breakpoints: (landscape: 400px,
+               phone: 640px, 
                tablet: 768px, 
                desktop: 1024px) !default;
 

@@ -44,8 +44,7 @@ a {
     }
 }
 
-.project-flip
-  {
+.project-flip {
         opacity: 0;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
@@ -64,10 +63,14 @@ a {
 
         // Loop through the items and add some delay.
       @for $i from 1 through 11 {
-          &:nth-child(#{$i}) {
-             -webkit-animation-delay: (0.1s * $i);
-            -moz-animation-delay: (0.1s * $i);
-            animation-delay: (0.1s * $i);
-          }
-       }
+        &:nth-child(#{$i}) {
+            -webkit-animation-delay: (0.1s * $i);
+        -moz-animation-delay: (0.1s * $i);
+        animation-delay: (0.1s * $i);
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 50px;
+    }
 }

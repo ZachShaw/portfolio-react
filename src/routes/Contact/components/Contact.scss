@@ -5,6 +5,10 @@
     padding-top: 100px;
     width: 100%;
 
+    @include media('height<landscape') {
+        padding-top: 70px;
+    }
+
     h2 {
         margin-bottom: 30px;
     }

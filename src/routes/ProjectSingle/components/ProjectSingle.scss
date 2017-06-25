@@ -1,6 +1,7 @@
 .image {
     height: 400px;
     width: 700px;
+    display: inline-table;
     background-color: rgba(255, 255, 255, 0.8);
 
     @include media('<desktop') {
@@ -55,10 +56,20 @@
     align-items: flex-start;
     position: relative;
 
+    @include media('height<landscape') {
+        padding-top: 70px;
+    }
+
     a {
       position: absolute;
       top: 95px;
       left: -80px;
+
+      @include media('height<landscape') {
+          top: 45px;
+          right: -6vw;
+          left: initial;
+      }
 
       @include media('<tablet') {
           top: 35px;
