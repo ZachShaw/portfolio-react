@@ -65,8 +65,8 @@ class Navbar extends React.Component {
       this.toggleMobileNav = !this.toggleMobileNav;
       this.setState({
         navMbContainer: {
-          height: '280px',
-          width: '230px',
+          height: '250px',
+          width: '200px',
           border: '1px solid #fff',
           WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
           msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
