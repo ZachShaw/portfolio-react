@@ -130,9 +130,9 @@ class Navbar extends React.Component {
             <div onClick={()=> this.onClickToggleNav()} className="overlay"></div>
           }
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+            <span className="line"></span>
+            <span className="line"></span>
+            <span className="line"></span>
           </div>
           <div className="nav-mb-box" style={
             this.state.navMbContainer
