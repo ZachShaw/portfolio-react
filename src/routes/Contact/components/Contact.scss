@@ -13,28 +13,23 @@
         display: flex;
         align-items: flex-end;
         margin: 20px 0;
-        
+
         p {
-            margin: 0 0 16px 20px;
-        }
-
-        .img-email {
-            height: 50px;
-            width: auto;
-        }
-
-        .coffee-wrapper {
-            height: 70px;
-            width: 52px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .img-coffee {
-                height: 86px;
-                width: auto;
+            margin: 0;
+            span {
+                display: inline-block;
             }
+        }
+
+        a {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        .img-coffee {
+            margin-left: 2px;
+            height: 15px;
+            width: auto;
         }
     }
 }

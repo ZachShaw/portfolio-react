@@ -8,7 +8,7 @@
     margin-bottom: 100px;
 
     @include media('<phone') {
-        align-items: center;
+        align-items: flex-start;
     }
 
     h2 {
