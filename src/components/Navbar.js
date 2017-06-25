@@ -66,7 +66,7 @@ class Navbar extends React.Component {
       this.setState({
         navMbContainer: {
           height: '250px',
-          width: '200px',
+          width: '215px',
           border: '1px solid #fff',
           WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
           msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
@@ -97,6 +97,7 @@ class Navbar extends React.Component {
 
   render() {
     const singleProjectActive = this.props.location.pathname.includes('projects');
+    const { toggleMobileNav } = this.state;
     return (
       <div className="navbar-container">
         {this.iconInitials()}
@@ -125,6 +126,9 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
+          { this.toggleMobileNav && 
+            <div onClick={()=> this.onClickToggleNav()} className="overlay"></div>
+          }
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
             <span class="line"></span>
             <span class="line"></span>
