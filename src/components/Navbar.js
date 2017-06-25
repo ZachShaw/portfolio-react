@@ -57,17 +57,19 @@ class Navbar extends React.Component {
         navMbContainer: {
           height: '0px',
           width: '0px',
-          display: 'none'
+          WebkitTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)',
+          msTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)'
         }
       })
     } else {
       this.toggleMobileNav = !this.toggleMobileNav;
       this.setState({
         navMbContainer: {
-          display: 'flex',
           height: '280px',
           width: '230px',
-          border: '1px solid #fff'
+          border: '1px solid #fff',
+          WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
+          msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
         }
       })
     }
@@ -87,6 +89,10 @@ class Navbar extends React.Component {
 
   toggleNavItems() {
     return this.toggleMobileNav ? 'mb-active' : 'mb-inactive'
+  }
+
+  toggleBurger() {
+    return this.toggleMobileNav ? 'hamburger-is-active' : ''
   }
 
   render() {
@@ -119,7 +125,11 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          <h1 onClick={()=> this.onClickToggleNav()}>X</h1>
+          <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
           <div className="nav-mb-box" style={
             this.state.navMbContainer
           }>
@@ -129,6 +139,7 @@ class Navbar extends React.Component {
                 return (
                   <Link to={item.href}
                       key={item.id}
+                      onClick={()=> this.onClickToggleNav()}
                       className={this.toggleNavItems()}>
                       <div>{item.title}</div>
                   </Link>

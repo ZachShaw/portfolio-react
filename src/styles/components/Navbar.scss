@@ -80,26 +80,27 @@
         width: 0px;
         top: 5px;
         right: 5px;
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.95);
-        -webkit-transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
-        transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+        -webkit-transition: all 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
+        transition: all 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
         position: absolute;
         overflow: hidden;
 
-        .mb-active {
-            display: flex;
+        a {
             width: 100%;
             height: 25%;
-            padding: 0 0 0 10px;
+            padding: 0 0 0 20px;
             background-color: white;
             color: rgba(0, 0, 0, 0.95);
-            display: flex;
             align-items: center;
+            border: 1px solid #fff;
+        }
+
+        .mb-active {
+            display: flex;
         }
 
         .mb-inactive {
@@ -112,10 +113,46 @@
             background-color: #fff;
         }
     }
-    h1 {
+
+    .hamburger {
         position: absolute;
         top: 10px;
         right: 10px;
         z-index: 9999999;
+        span {
+            width: 40px;
+            height: 3px;
+            background-color: #ecf0f1;
+            display: block;
+            margin: 8px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+        /* ONE */
+
+    .hamburger-is-active span {
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(1) {
+            -webkit-transform: translateY(13px) rotate(45deg);
+            -ms-transform: translateY(13px) rotate(45deg);
+            -o-transform: translateY(13px) rotate(45deg);
+            transform: translateY(13px) rotate(45deg);
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+        &:nth-child(3) {
+            -webkit-transform: translateY(-10px) rotate(-45deg);
+            -ms-transform: translateY(-10px) rotate(-45deg);
+            -o-transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-10px) rotate(-45deg);
+            background-color: rgba(0, 0, 0, 0.95);
+        }
     }
 }
