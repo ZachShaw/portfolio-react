@@ -55,34 +55,39 @@ class Navbar extends React.Component {
       this.toggleMobileNav = !this.toggleMobileNav;
       this.setState({
         navMbContainer: {
-          height: '35px',
-          width: '35px'
+          height: '0px',
+          width: '0px',
+          display: 'none'
         }
       })
     } else {
       this.toggleMobileNav = !this.toggleMobileNav;
       this.setState({
         navMbContainer: {
-          height: '300px',
-          width: '180px',
-          transition: 'width 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1), height 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1)',
-          WebkitTransition: 'width 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1), height 150ms cubic-beziercubic-bezier(0.23, 1, 0.32, 1)'
+          display: 'flex',
+          height: '280px',
+          width: '230px',
+          border: '1px solid #fff'
         }
       })
     }
   }
 
   iconInitials() {
-      if (this.props.location.pathname !== '/') {
-        return (
-          <Link to='/'>
-            <div className="navbar-title">
-              <h1>ZS</h1>
-            </div>
-          </Link>
-        )
-      }
+    if (this.props.location.pathname !== '/') {
+      return (
+        <Link to='/'>
+          <div className="navbar-title">
+            <h1>ZS</h1>
+          </div>
+        </Link>
+      )
     }
+  }
+
+  toggleNavItems() {
+    return this.toggleMobileNav ? 'mb-active' : 'mb-inactive'
+  }
 
   render() {
     const singleProjectActive = this.props.location.pathname.includes('projects');
@@ -114,21 +119,22 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          <div onClick={()=> this.onClickToggleNav()} className="nav-mb-box" style={
+          <h1 onClick={()=> this.onClickToggleNav()}>X</h1>
+          <div className="nav-mb-box" style={
             this.state.navMbContainer
           }>
-            <span>X</span>
+            <div className="nav-mb-fill"></div>
             {
               navParentItems.map((item) => {
                 return (
                   <Link to={item.href}
-                      key={item.id}>
-                      {item.title}
+                      key={item.id}
+                      className={this.toggleNavItems()}>
+                      <div>{item.title}</div>
                   </Link>
                 )
               })
             }
-            <h2></h2>
           </div>
         </div>
       </div>
