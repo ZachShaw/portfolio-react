@@ -79,6 +79,12 @@
           top: 35px;
           left: -8px;
       }
+
+      @include media('<phone') {
+        top: 45px;
+        right: -5px;
+        left: initial;
+      }
       img {
         height: 47px;
       }
