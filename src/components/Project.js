@@ -14,7 +14,7 @@ class Project extends React.Component {
     if (this.props.project.framework.includes('React')) {
       return <img className="fw-logo" src={require(`../assets/images/react.svg`)} />
     } else if (this.props.project.framework.includes('AngularJS 1.5') || this.props.project.framework.includes('AngularJS 1.6')) {
-      return <img className="fw-logo" src={require(`../assets/images/angular.png`)} />
+      return <img className="fw-logo" src={require(`../assets/images/angular.svg`)} />
     }
   }
 
@@ -26,7 +26,9 @@ class Project extends React.Component {
           <div className="project">
             <div className="topFlip">
               {this.props.project.title}
-              {this.framework()}
+              <div className="fw-overlay">
+                {this.framework()}
+              </div>
             </div>
             <div className="bottomFlop">
               <div>

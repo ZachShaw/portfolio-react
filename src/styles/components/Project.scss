@@ -1,6 +1,10 @@
 .project-container {
     height: 200px;
     overflow: hidden;
+
+    @include media('<phone') {
+        height: 65px;
+    }
 }
 .project {
     -webkit-transform-style: preserve-3d;
@@ -26,15 +30,6 @@
             text-decoration: none;
         }
     }
-    .fw-logo {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        margin-top: 20px;
-        height: 30px;
-        // opacity: 0.2;
-        width: auto;
-    }
 
     .topFlip, .bottomFlop {
         display: flex;
@@ -58,6 +53,39 @@
         font-size: 12px;
         -webkit-transform: translateZ(50px) translateY(20px);
         transform: translateZ(50px);
+        @include media('<phone') {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            justify-content: flex-start;
+            flex-direction: row;
+            color: #fff;
+            font-size: 14px;
+            padding-left: 40px;
+            background-color: initial;
+            border: initial;
+            text-align: left;
+        }
+        .fw-overlay {
+            color: #fff;
+            height: 30px;
+            width: auto;
+            bottom: 20px;
+            right: 20px;
+            position: absolute;
+
+            @include media('<phone') {
+                left: 0;
+                bottom: 5px;
+            }
+
+            .fw-logo {
+                height: 30px;
+                width: auto;
+                filter: contrast(0.6);
+                max-width: 30px;
+            }
+        }
     }
     .bottomFlop {
         background-color: #1A1B1E;
@@ -79,4 +107,11 @@
             }
         }
     }
+}
+
+.fw-overlay:after {
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
