@@ -124,9 +124,7 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          { toggleMobileNav && 
-            <div onClick={()=> this.onClickToggleNav()} className="overlay"></div>
-          }
+          <div onClick={()=> this.onClickToggleNav()} className={ toggleMobileNav ? 'overlay-active overlay' : 'overlay'}></div>
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
             <span className="line"></span>
             <span className="line"></span>
