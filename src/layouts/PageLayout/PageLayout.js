@@ -12,14 +12,14 @@ export const PageLayout = ({ children, location }) => {
     }
   }
   return (
-    <div style={{height: '100%'}}>
+    <div>
       <CSSTransitionGroup
         transitionName="navbar"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={300}>
         {displayNav()}
       </CSSTransitionGroup>
-      <div className='container text-center height'>
+      <div className='container text-center'>
         <div className='page-layout__viewport'>
           {children}
         </div>

@@ -10,6 +10,7 @@
     @include media('<phone') {
         align-items: flex-start;
         padding-top: 50px;
+        margin-bottom: 0px;
     }
 
     @include media('height<landscape') {
