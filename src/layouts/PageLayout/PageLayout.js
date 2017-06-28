@@ -12,7 +12,7 @@ export const PageLayout = ({ children, location }) => {
     }
   }
   return (
-    <div style={{height: '100%'}}>
+    <div>
       <CSSTransitionGroup
         transitionName="navbar"
         transitionEnterTimeout={500}
