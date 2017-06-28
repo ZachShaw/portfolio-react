@@ -59,6 +59,7 @@
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+    margin-bottom: 50px;
 
     @include media('height<landscape') {
         padding-top: 70px;
