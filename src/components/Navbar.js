@@ -41,6 +41,13 @@ class Navbar extends React.Component {
     this.toggleNavOffset(item);
   }
 
+  componentDidMount() {
+    this.setState({
+      navMbContainer: 'nav-mb-box-inactive',
+      toggleMobileNav: false
+    })
+  }
+
    toggleNavOffset(itemId) {
     let  offset = widthPercent * itemId
     this.setState({
@@ -51,25 +58,12 @@ class Navbar extends React.Component {
   onClickToggleNav() {
     if (this.state.toggleMobileNav) {
       this.setState({
-        navMbContainer: {
-          height: '0px',
-          width: '0px',
-          opacity: '0',
-          WebkitTransition: 'height 20s, width 10s, opacity 0.4s',
-          msTransition: 'height 20s, width 10s, opacity 0.4s'
-        },
+        navMbContainer: 'nav-mb-box-inactive',
         toggleMobileNav: false
       })
     } else {
       this.setState({
-        navMbContainer: {
-          height: '250px',
-          width: '190px',
-          opacity: '1',
-          border: '1px solid rgb(101, 102, 104)',
-          WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
-          msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
-        },
+        navMbContainer: 'nav-mb-box-active',
         toggleMobileNav: true
       })
     }
@@ -132,9 +126,7 @@ class Navbar extends React.Component {
             <span className="line"></span>
             <span className="line"></span>
           </div>
-          <div className="nav-mb-box" style={
-            this.state.navMbContainer
-          }>
+          <div className={`nav-mb-box ${this.state.navMbContainer}`}>
             <div className="nav-mb-fill"></div>
             {
               navParentItems.map((item) => {
