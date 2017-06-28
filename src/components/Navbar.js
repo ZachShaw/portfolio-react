@@ -55,16 +55,21 @@ class Navbar extends React.Component {
     });
   }
 
-  onClickToggleNav() {
-    if (this.state.toggleMobileNav) {
+  onClickToggleNav(overlay) {
+    if (this.state.toggleMobileNav && !overlay) {
       this.setState({
         navMbContainer: 'nav-mb-box-inactive',
         toggleMobileNav: false
       })
-    } else {
+    } else if(!this.state.toggleMobileNav && !overlay) {
       this.setState({
         navMbContainer: 'nav-mb-box-active',
         toggleMobileNav: true
+      })
+    } else {
+      this.setState({
+        navMbContainer: 'nav-mb-box-inactive',
+        toggleMobileNav: false
       })
     }
   }
@@ -120,7 +125,7 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          <div onClick={()=> this.onClickToggleNav()} className={ toggleMobileNav ? 'overlay-active overlay' : 'overlay overlay-opacity'}></div>
+          <div onClick={()=> this.onClickToggleNav(true)} className={ toggleMobileNav ? 'overlay-active overlay' : 'overlay overlay-opacity'}></div>
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
             <span className="line"></span>
             <span className="line"></span>
