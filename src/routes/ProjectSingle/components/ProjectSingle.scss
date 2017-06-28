@@ -62,11 +62,11 @@
     margin-bottom: 50px;
 
     @include media('height<landscape') {
-        padding-top: 70px;
+        padding-top: 100px;
     }
 
     @include media('<phone') {
-        padding-top: 60px;
+        padding-top: 50px;
     }
 
     a {
@@ -76,7 +76,7 @@
 
       @include media('height<landscape') {
           top: 45px;
-          right: -6vw;
+          right: -5.5vw;
           left: initial;
       }
 
@@ -90,6 +90,11 @@
         right: -6px;
         left: initial;
       }
+
+      @include media('height<330px') {
+        top: 50px;
+      }
+
       img {
         height: 44px;
       }
