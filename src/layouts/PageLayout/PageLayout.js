@@ -19,7 +19,7 @@ export const PageLayout = ({ children, location }) => {
         transitionLeaveTimeout={300}>
         {displayNav()}
       </CSSTransitionGroup>
-      <div style={{height: '100%'}} className='container text-center'>
+      <div className='container text-center height'>
         <div className='page-layout__viewport'>
           {children}
         </div>

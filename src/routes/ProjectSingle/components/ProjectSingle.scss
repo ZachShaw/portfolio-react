@@ -14,8 +14,12 @@
         height: 200px;
     }
 
-     @include media('<phone') {
-        width: 350px;
+    @include media('<phone') {
+      width: 350px;
+    }
+
+    @media (max-width: 320px) {
+      width: 280px;
     }
 }
 
