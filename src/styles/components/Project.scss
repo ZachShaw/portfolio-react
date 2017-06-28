@@ -69,10 +69,12 @@
         .fw-overlay {
             color: #fff;
             height: 30px;
-            width: auto;
+            width: 30px;
             bottom: 20px;
             right: 20px;
             position: absolute;
+            overflow: hidden;
+            -webkit-transform-style: preserve-3d;
 
             @include media('<phone') {
                 left: 0;
@@ -80,10 +82,12 @@
             }
 
             .fw-logo {
-                height: 30px;
-                width: auto;
+                display: block;
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
                 filter: contrast(0.6);
-                max-width: 30px;
+                -webkit-transform-style: preserve-3d;
             }
         }
     }
