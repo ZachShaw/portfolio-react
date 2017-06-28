@@ -185,19 +185,23 @@
 
     .overlay {
         position: absolute;
-        transition: all 0s;
         z-index: 500;
         top: 68px;
-        height: 0vh;
-        width: 0vw;
         right: 20px;
         background-color: rgba(0, 0, 0, 0.5);
         &-active {
             height: 100vh;
             width: 100vw;
             right: 0px;
+            opacity: 1;
             // border-radius: 0%;
             animation: circle 0.25s ease-in;
+        }
+        &-opacity {
+            height: 0vh;
+            width: 0vw;
+            opacity: 0;
+            transition: height 20s, width 10s, opacity 0.4s;
         }
 
         @keyframes circle {

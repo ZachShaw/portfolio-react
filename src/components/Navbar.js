@@ -54,8 +54,9 @@ class Navbar extends React.Component {
         navMbContainer: {
           height: '0px',
           width: '0px',
-          WebkitTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)',
-          msTransition: 'height 10ms cubic-bezier(0.4, 0.0, 1, 1)'
+          opacity: '0',
+          WebkitTransition: 'height 20s, width 10s, opacity 0.4s',
+          msTransition: 'height 20s, width 10s, opacity 0.4s'
         },
         toggleMobileNav: false
       })
@@ -64,6 +65,7 @@ class Navbar extends React.Component {
         navMbContainer: {
           height: '250px',
           width: '190px',
+          opacity: '1',
           border: '1px solid rgb(101, 102, 104)',
           WebkitTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)',
           msTransition: 'all 250ms cubic-bezier(0.0, 0.0, 0.2, 1)'
@@ -124,7 +126,7 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className="navbar-mobile-wrapper">
-          <div onClick={()=> this.onClickToggleNav()} className={ toggleMobileNav ? 'overlay-active overlay' : 'overlay'}></div>
+          <div onClick={()=> this.onClickToggleNav()} className={ toggleMobileNav ? 'overlay-active overlay' : 'overlay overlay-opacity'}></div>
           <div onClick={()=> this.onClickToggleNav()} className={`hamburger ${this.toggleBurger()}`}>
             <span className="line"></span>
             <span className="line"></span>
