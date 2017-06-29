@@ -10,14 +10,6 @@ class Project extends React.Component {
   componentWillMount() {
   }
 
-  framework() {
-    if (this.props.project.framework.includes('React')) {
-      return <img className="fw-logo" src={require(`../assets/images/react.svg`)} />
-    } else if (this.props.project.framework.includes('AngularJS 1.5') || this.props.project.framework.includes('AngularJS 1.6')) {
-      return <img className="fw-logo" src={require(`../assets/images/angular.svg`)} />
-    }
-  }
-
   render() {
 
     return (
@@ -27,7 +19,7 @@ class Project extends React.Component {
             <div className="topFlip">
               {this.props.project.title}
               <div className="fw-overlay">
-                {this.framework()}
+                <img className="fw-logo" src={require(`../assets/images/${this.props.project.fwImg}`)} />
               </div>
             </div>
             <div className="bottomFlop">

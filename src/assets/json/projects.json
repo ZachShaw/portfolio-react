@@ -6,7 +6,8 @@
         "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
-        "url": "hc-customer"
+        "url": "hc-customer",
+        "fwImg": "angular.svg"
     },
     {
         "key": 2,
@@ -15,7 +16,8 @@
         "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
-        "url": "hc-signup"
+        "url": "hc-signup",
+        "fwImg": "angular.svg"
     },
     {
         "key": 3,
@@ -24,7 +26,8 @@
         "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
-        "url": "hc-colleague"
+        "url": "hc-colleague",
+        "fwImg": "angular.svg"
     },
     {
         "key": 4,
@@ -33,7 +36,8 @@
         "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "JSON",
         "externalLinks": null,
-        "url": "beautifulyou"
+        "url": "beautifulyou",
+        "fwImg": "angular.svg"
     },
     {
         "key": 5,
@@ -42,7 +46,8 @@
         "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "PUG", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
-        "url": "dfa"
+        "url": "dfa",
+        "fwImg": "angular.svg"
     },
     {
         "key": 6,
@@ -51,7 +56,8 @@
         "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
-        "url": "investigate"
+        "url": "investigate",
+        "fwImg": "angular.svg"
     },
     {
         "key": 7,
@@ -60,7 +66,8 @@
         "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
-        "url": "totemcms"
+        "url": "totemcms",
+        "fwImg": "angular.svg"
     },
     {
         "key": 8,
@@ -69,7 +76,8 @@
         "framework": ["React", "Redux", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
-        "url": "totemtv"
+        "url": "totemtv",
+        "fwImg": "react.svg"
     },
     {
         "key": 9,
@@ -78,7 +86,8 @@
         "framework": ["AngularJS 1.6", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "https://www.totem.team",
-        "url": "totem"
+        "url": "totem",
+        "fwImg": "angular.svg"
     },
     {
         "key": 10,
@@ -87,7 +96,8 @@
         "framework": ["React", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": "https://www.play-consult.co.uk",
-        "url": "play"
+        "url": "play",
+        "fwImg": "react.svg"
     },
     {
         "key": 11,
@@ -96,6 +106,7 @@
         "framework": ["AngularJS 1.6", "Redux", "ES6", "Javascript", "Webpack", "Stylus"],
         "api": "RESTful",
         "externalLinks": "https://www.plantstove.com",
-        "url": "plantstove"
+        "url": "plantstove",
+        "fwImg": "angular.svg"
     }
 ]

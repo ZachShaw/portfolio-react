@@ -17,12 +17,12 @@
             -webkit-transform: rotateX(89deg) translateZ(95px);
             transform: rotateX(89deg) translateZ(95px);
         }
-        
+
         h6 {
             color: rgba(0, 0, 0, 0.5);
         }
     }
-    
+
     h6 {
         text-decoration: none;
         color: white;
@@ -72,22 +72,25 @@
             width: 30px;
             bottom: 20px;
             right: 20px;
-            position: absolute;
+
             overflow: hidden;
             -webkit-transform-style: preserve-3d;
+        }
+
+        .fw-logo {
+            display: inline-block;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+            max-width: 100%;
+            filter: contrast(0.6);
 
             @include media('<phone') {
                 left: 0;
                 bottom: 5px;
-            }
-
-            .fw-logo {
-                display: block;
-                height: 100%;
-                width: 100%;
-                max-width: 100%;
-                filter: contrast(0.6);
-                -webkit-transform-style: preserve-3d;
             }
         }
     }

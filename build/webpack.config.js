@@ -153,6 +153,12 @@ config.module.rules.push({
     limit : 8192,
   },
 })
+config.module.rules.push({
+  test: /\.svg$/,
+  loader: 'url-loader',
+  query: { mimetype: "image/svg+xml" },
+  include: path.join(__dirname, 'assets/images')
+})
 
 // Fonts
 // ------------------------------------
