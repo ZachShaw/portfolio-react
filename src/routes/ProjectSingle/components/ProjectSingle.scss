@@ -71,18 +71,13 @@
 
     a {
       position: absolute;
-      top: 95px;
-      left: -80px;
+      top: 35px;
+      left: -10px;
 
       @include media('height<landscape') {
           top: 45px;
           right: -5.5vw;
           left: initial;
-      }
-
-      @include media('<tablet') {
-          top: 35px;
-          left: -8px;
       }
 
       @include media('<phone') {
