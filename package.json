@@ -12,33 +12,33 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start:prod",
     "serve": "better-npm-run start",
-    "postinstall": "npm run deploy:prod"
-  },
-  "betterScripts": {
-    "start:prod": {
-      "command": "node bin/server",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
-    "deploy": {
-      "command": "npm rebuild node-sass; npm run compile",
-      "env": {
-        "DEBUG": "app:*"
-      }
-    },
-    "deploy:dev": {
-      "command": "npm run deploy",
-      "env": {
-        "NODE_ENV": "development",
-        "DEBUG": "app:*"
-      }
-    },
-    "deploy:prod": {
-      "command": "npm run deploy",
-      "env": {
-        "NODE_ENV": "production",
-        "DEBUG": "app:*"
+    "postinstall": "better-npm-run deploy:prod",
+    "betterScripts": {
+      "start:prod": {
+        "command": "node bin/server",
+        "env": {
+          "NODE_ENV": "production"
+        }
+      },
+      "deploy": {
+        "command": "npm rebuild node-sass; npm run compile",
+        "env": {
+          "DEBUG": "app:*"
+        }
+      },
+      "deploy:dev": {
+        "command": "npm run deploy",
+        "env": {
+          "NODE_ENV": "development",
+          "DEBUG": "app:*"
+        }
+      },
+      "deploy:prod": {
+        "command": "npm run deploy",
+        "env": {
+          "NODE_ENV": "production",
+          "DEBUG": "app:*"
+        }
       }
     }
   },
