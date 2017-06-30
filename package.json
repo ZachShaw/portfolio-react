@@ -28,14 +28,14 @@
       }
     },
     "deploy:dev": {
-      "command": "npm run deploy",
+      "command": "better-npm-run deploy",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "app:*"
       }
     },
     "deploy:prod": {
-      "command": "npm run deploy",
+      "command": "better-npm-run deploy",
       "env": {
         "NODE_ENV": "production",
         "DEBUG": "app:*"
