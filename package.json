@@ -6,14 +6,14 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
-    "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
     "test": "cross-env NODE_ENV=test karma start build/karma.config",
     "test:watch": "npm test -- --watch",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "better-npm-run start:prod",
     "serve": "better-npm-run start",
     "postinstall": "npm run deploy:prod",
+    "build": "npm run deploy:prod",
+    "start": "better-npm-run start:prod",
     "betterScripts": {
       "start:prod": {
         "command": "node bin/server",
