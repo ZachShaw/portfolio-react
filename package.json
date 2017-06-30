@@ -12,7 +12,7 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start:prod",
     "serve": "better-npm-run start",
-    "postinstall": "better-npm-run deploy:prod",
+    "postinstall": "better-npm-run deploy:prod"
   },
   "betterScripts": {
     "start:prod": {
