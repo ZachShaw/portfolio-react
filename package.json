@@ -11,14 +11,24 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start:prod",
+    "start-dev": "better-npm-run start:dev",
     "serve": "better-npm-run start",
     "postinstall": "better-npm-run deploy:prod"
   },
   "betterScripts": {
+    "start": {
+      "command": "node build/scripts/start"
+    },
     "start:prod": {
-      "command": "node bin/server",
+      "command": "better-npm-run start",
       "env": {
         "NODE_ENV": "production"
+      }
+    },
+    "start:dev": {
+      "command": "better-npm-run start",
+      "env": {
+        "NODE_ENV": "development"
       }
     },
     "deploy": {
