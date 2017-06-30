@@ -20,6 +20,12 @@
         "env": {
           "NODE_ENV": "production"
         }
+      },
+      "deploy:prod": {
+        "command": "node bin/server",
+        "env": {
+          "NODE_ENV": "production"
+        }
       }
     }
   },
