@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
+  "name": "zs-website",
   "version": "3.0.1",
-  "description": "Get started with React, Redux, and React-Router!",
+  "description": "zachshaw website in react!",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -25,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/ZachShaw/portfolio-react.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Zach Shaw",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
