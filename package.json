@@ -28,7 +28,8 @@
     "start:dev": {
       "command": "better-npm-run start",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "PORT": 3000
       }
     },
     "deploy": {
