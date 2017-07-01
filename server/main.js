@@ -30,8 +30,9 @@ if (project.env === 'development') {
   }))
 
   // Always return the main index.html
+  app.use(express.static(path.join(__dirname, 'dist')));
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+      res.sendfile('./dist/index.html');
   });
 
   // Serve static assets from ~/public since Webpack is unaware of
