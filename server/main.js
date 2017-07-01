@@ -27,12 +27,7 @@ if (project.env === 'development') {
   }))
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
-  }))
-
-  // Always return the main index.html
-  app.get('*', function (request, response){
-      response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
-  })  
+  })) 
 
   // Serve static assets from ~/public since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside
@@ -68,5 +63,10 @@ if (project.env === 'development') {
   // server in production.
   app.use(express.static(path.resolve(project.basePath, project.outDir)))
 }
+
+// Always return the main index.html
+app.get('*', function (request, response){
+    response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+}) 
 
 module.exports = app
