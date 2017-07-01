@@ -31,7 +31,7 @@ if (project.env === 'development') {
 
   // Always return the main index.html
   app.get('*', function (request, response){
-      response.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+      response.sendFile(path.resolve(__dirname, './dist/index.html'))
   })
 
   // Serve static assets from ~/public since Webpack is unaware of
