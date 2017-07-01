@@ -11,7 +11,7 @@ export const HomeView = () => (
       <p>Stack: React, AngularJS, Redux, Javascript (ES6), jQuery, REST, webpack, gulp, grunt, Sass, Less, Stylus, yarn, bower, npm, webpack, pug, Chai, AWS, Semaphore CI, Google Analytics, JIRA, Confluence, Material UI, Bootstrap</p>
       <div className="btn-container">
         <Link to="/projects"><div className="btn">Projects</div></Link>
-        <Link to="/about"><div className="btn">Experience</div></Link>
+        <Link to="/experience"><div className="btn">Experience</div></Link>
         <Link to="/contact"><div className="btn">Contact</div></Link>
       </div>
     </div>

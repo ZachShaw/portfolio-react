@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './About.scss'
+import './Experience.scss'
 
-export const About = ({}) => {
+export const Experience = ({}) => {
   return (
     <div className="experience-container">
       <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">Experience</h2>
@@ -27,10 +27,10 @@ export const About = ({}) => {
       <div className="animated animated-4 experience-wrapper">
         <h5>SAP Developer</h5>
         <p>Where: Boots UK, August 2013 - April 2015</p>
-        <p>Role: ABAP Developer writing custom interfaces, reports and extensions for different end users & teams. This includes finance, HR, supply chain, pharmacy, real estate and retail as well as in writing automation scripts for mass data migration and maintenance.</p>
+        <p>Role: ABAP Developer writing custom interfaces, reports and extensions for different end users & teams. This includes finance, HR, supply chain, pharmacy, real estate and retail as well as writing automation scripts for mass data migration and maintenance.</p>
       </div>
     </div>
   )
 }
 
-export default About
+export default Experience

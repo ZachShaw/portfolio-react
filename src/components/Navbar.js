@@ -5,7 +5,7 @@ import '../styles/components/Navbar.scss';
 
 const navParentItems = [
   { title: 'Projects', href: '/projects', id: 1 },
-  { title: 'Experience', href: '/about', id: 2},
+  { title: 'Experience', href: '/experience', id: 2},
   { title: 'Contact', href: '/contact', id: 3},
 ];
 
