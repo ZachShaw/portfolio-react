@@ -29,6 +29,11 @@ if (project.env === 'development') {
     path: '/__webpack_hmr'
   }))
 
+  // Always return the main index.html
+  app.get('*', function (request, response){
+      response.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+  })
+
   // Serve static assets from ~/public since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside
   // of development since this directory will be copied into ~/dist
@@ -62,11 +67,6 @@ if (project.env === 'development') {
   // the web server and not the app server, but this helps to demo the
   // server in production.
   app.use(express.static(path.resolve(project.basePath, project.outDir)))
-
-    // Always return the main index.html
-  app.get('*', function (request, response){
-      response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
-  })
 }
 
 module.exports = app
