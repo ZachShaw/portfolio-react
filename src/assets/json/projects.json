@@ -1,58 +1,8 @@
-[
-    {
-        "key": 1,
-        "title": "Health Coach",
-        "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle.",
-        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "RESTful",
-        "externalLinks": null,
-        "url": "hc-customer",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 2,
-        "title": "Health Coach Signup",
-        "description": "Customer facing app that allowed customers to book an appointment with their local pharmacist to enroll on the health coach program.",
-        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "RESTful",
-        "externalLinks": null,
-        "url": "hc-signup",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 3,
-        "title": "Health Coach Colleague",
-        "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach.",
-        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "RESTful",
-        "externalLinks": null,
-        "url": "hc-colleague",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 4,
-        "title": "Beautiful You",
-        "description": "SPA used by customers on large touch panels to browse and purchase targeted products based on the users interactions with the application.",
-        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "JSON",
-        "externalLinks": null,
-        "url": "beautifulyou",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 5,
-        "title": "Digital Fitness Assessment",
-        "description": "SPA designed to help companies idenfity employees strengths and weaknessess on the path to digital success. Through engaging cards, users are guided through a step by step series of questions and videos to test their knowledge.",
-        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "PUG", "Webpack", "LESS"],
-        "api": "RESTful",
-        "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
-        "url": "dfa",
-        "fwImg": "angular.svg"
-    },
+[   
     {
         "key": 6,
         "title": "PwC Investigate!",
-        "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The game includes question based interviews, interactive phones, email client plus more to help users identify and accuse suspects of commiting fraudulent activities.",
+        "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The games architecture was heavily focused around Redux storing the games data, especially as incoming socket messages would dictate the flow of the game. An administration loby and Node.js socket server were also created to facilitate the game.",
         "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
@@ -60,9 +10,19 @@
         "fwImg": "angular.svg"
     },
     {
+        "key": 5,
+        "title": "Digital Fitness Assessment",
+        "description": "SPA designed to help companies idenfity employees strengths and weaknessess on the path to digital success. Through engaging cards, users are guided through a step by step series of questions and videos to test their knowledge. An additional quiz section was then added to the app including animated graphs showing the users results against company averages.",
+        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "PUG", "Webpack", "LESS"],
+        "api": "RESTful",
+        "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
+        "url": "dfa",
+        "fwImg": "angular.svg"
+    },
+    {
         "key": 7,
         "title": "Totem CMS",
-        "description": "CMS used internally and by specific customers to manage, curate and update new content in the app employee engagement app Totem.",
+        "description": "CMS used internally and by specific customers to manage, curate and update new content in the app employee engagement app Totem. Recently upgraded to use ES6 classes, Angular components and Redux.",
         "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
@@ -92,12 +52,52 @@
     {
         "key": 10,
         "title": "Play",
-        "description": "Static site for Play Consulting",
+        "description": "Static site for Play Consulting, built using React in a very short period of time for speed and efficiency.",
         "framework": ["React", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": "https://www.play-consult.co.uk",
         "url": "play",
         "fwImg": "react.svg"
+    },
+    {
+        "key": 1,
+        "title": "Health Coach",
+        "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle. This included a dashboard where users were able to track and monitor their exercise, nutrition and medication along with regularly updated content and relevant articles.",
+        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "RESTful",
+        "externalLinks": null,
+        "url": "hc-customer",
+        "fwImg": "angular.svg"
+    },
+    {
+        "key": 2,
+        "title": "Health Coach Signup",
+        "description": "Customer facing app that allowed customers to book an appointment with their local pharmacist to enroll on the health coach program. Users were able to search for their nearest store, send basic information and re-arrange appointments.",
+        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "RESTful",
+        "externalLinks": null,
+        "url": "hc-signup",
+        "fwImg": "angular.svg"
+    },
+    {
+        "key": 3,
+        "title": "Health Coach Colleague",
+        "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach. The user journey was dynamically driven by the information provided by patients during their consultation.",
+        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "RESTful",
+        "externalLinks": null,
+        "url": "hc-colleague",
+        "fwImg": "angular.svg"
+    },
+    {
+        "key": 4,
+        "title": "Beautiful You",
+        "description": "SPA used by Boots customers on large touch panels to browse and purchase targeted products based on the users interactions with the app. Smart, reusable components were used across the board to allow new features to be pushed regularly.",
+        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "JSON",
+        "externalLinks": null,
+        "url": "beautifulyou",
+        "fwImg": "angular.svg"
     },
     {
         "key": 11,

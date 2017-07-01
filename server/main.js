@@ -29,6 +29,11 @@ if (project.env === 'development') {
     path: '/__webpack_hmr'
   }))
 
+  // Always return the main index.html
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+  });
+
   // Serve static assets from ~/public since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside
   // of development since this directory will be copied into ~/dist
