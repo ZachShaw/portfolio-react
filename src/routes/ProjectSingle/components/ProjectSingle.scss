@@ -1,25 +1,22 @@
 .image {
-    height: 400px;
+    height: auto;
     width: 700px;
     display: inline-table;
     background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.55);
 
     @include media('<desktop') {
         width: 450px;
-        height: 250px;
+        // height: 250px;
     }
 
     @include media('<tablet') {
         width: 400px;
-        height: 200px;
+        // height: 200px;
     }
 
     @include media('<phone') {
-      width: 350px;
-    }
-
-    @media (max-width: 320px) {
-      width: 280px;
+      width: 100%;
     }
 }
 
@@ -27,6 +24,18 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @include media('<desktop') {
+        width: 100%;
+    }
+
+    @include media('<phone') {
+        justify-content: space-between;
+    }
+
+    @include media('<330px') {
+        justify-content: flex-start;
+    }
 }
 
 .framework-single {
@@ -45,10 +54,17 @@
     }
 
     @include media('<phone') {
-        margin: 10px 15px 10px 0;
-        width: 90px;
+        flex-grow: 1;
+        width: 45%;
+        max-width: 45%;
         font-size: 10px;
         height: 30px;
+        margin: 10px 0;
+    }
+
+    @include media('<330px') {
+        max-width: 100%;
+        margin: 10px;
     }
 }
 
@@ -66,7 +82,8 @@
     }
 
     @include media('<phone') {
-        padding-top: 50px;
+        padding-top: 60px;
+        // padding-right: 20px;
     }
 
     a {

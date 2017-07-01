@@ -7,7 +7,8 @@
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "investigate",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 5,
@@ -17,7 +18,8 @@
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "dfa",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 7,
@@ -27,7 +29,8 @@
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "totemcms",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 8,
@@ -37,7 +40,8 @@
         "api": "RESTful",
         "externalLinks": null,
         "url": "totemtv",
-        "fwImg": "react.svg"
+        "fwImg": "react.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 9,
@@ -47,7 +51,8 @@
         "api": "RESTful",
         "externalLinks": "https://www.totem.team",
         "url": "totem",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 10,
@@ -57,7 +62,8 @@
         "api": "RESTful",
         "externalLinks": "https://www.play-consult.co.uk",
         "url": "play",
-        "fwImg": "react.svg"
+        "fwImg": "react.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 1,
@@ -67,7 +73,8 @@
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-customer",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 2,
@@ -77,7 +84,8 @@
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-signup",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 3,
@@ -87,7 +95,8 @@
         "api": "RESTful",
         "externalLinks": null,
         "url": "hc-colleague",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 4,
@@ -97,7 +106,8 @@
         "api": "JSON",
         "externalLinks": null,
         "url": "beautifulyou",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     },
     {
         "key": 11,
@@ -107,6 +117,7 @@
         "api": "RESTful",
         "externalLinks": "https://www.plantstove.com",
         "url": "plantstove",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "mainImg": "totem.png"
     }
 ]

@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const inProject = path.resolve.bind(path, project.basePath)
 const inProjectSrc = (file) => inProject(project.srcDir, file)
@@ -183,6 +184,13 @@ config.module.rules.push({
     },
   })
 })
+
+config.plugins.push(new ImageminPlugin({
+  disable: process.env.NODE_ENV !== 'production', // Disable during development 
+  pngquant: {
+    quality: '95-100'
+  }
+}))
 
 // HTML Template
 // ------------------------------------
