@@ -19,7 +19,7 @@ h4 {
   }
 
   @include media('<desktop', 'height>landscape') {
-    padding-top: 50px;
+    padding-top: 60px;
     height: 100%;
   }
 

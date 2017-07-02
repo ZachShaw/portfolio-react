@@ -27,6 +27,18 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @include media('<desktop') {
+        width: 100%;
+    }
+
+    @include media('<phone') {
+        justify-content: space-between;
+    }
+
+    @include media('<330px') {
+        justify-content: flex-start;
+    }
 }
 
 .framework-single {
@@ -45,10 +57,17 @@
     }
 
     @include media('<phone') {
-        margin: 10px 15px 10px 0;
-        width: 90px;
+        flex-grow: 1;
+        width: 45%;
+        max-width: 45%;
+        margin: 10px 0;
         font-size: 10px;
         height: 30px;
+    }
+
+    @include media('<330px') {
+        max-width: 100%;
+        margin: 10px;
     }
 }
 
@@ -66,7 +85,7 @@
     }
 
     @include media('<phone') {
-        padding-top: 50px;
+        padding-top: 60px;
     }
 
     a {
