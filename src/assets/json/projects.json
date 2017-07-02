@@ -2,7 +2,7 @@
     {
         "key": 6,
         "title": "PwC Investigate!",
-        "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The games architecture was heavily focused around Redux storing the games data, especially as incoming socket messages would dictate the flow of the game. An administration loby and Node.js socket server were also created to facilitate the game.",
+        "description": "Game designed to test the users abilities to handle a regulatory inquiry inside a large corporation. Investigate! is a realistic simulation of a regulatory investigation that provides practical insight and learning. The games architecture was heavily focused around Redux storing the games data, especially as incoming socket messages would dictate the flow of the game. An administration lobby and Node.js socket server were also created to facilitate the game.",
         "framework": ["AngularJS 1.6", "Redux", "D3", "ES6", "Javascript", "Webpack", "LESS"],
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
