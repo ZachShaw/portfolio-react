@@ -27,7 +27,7 @@ class ProjectSingle extends React.Component {
           <img className="back" src={require(`../../../assets/images/arrow-left.svg`)} />
         </Link>
         <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">{this.currentProject.title}</h2>
-        <div className="image"></div>
+        <img className="image" src={require(`../../../assets/images/${this.currentProject.imgUrl}`)}></img>
         <p>{this.currentProject.description}</p>
         <div className="frameworks">
           {

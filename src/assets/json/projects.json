@@ -7,7 +7,30 @@
         "api": "JSON",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "investigate",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "imgUrl": "investigate.jpg"
+    },
+        {
+        "key": 4,
+        "title": "Beautiful You",
+        "description": "SPA used by Boots customers on large touch panels to browse and purchase targeted products based on the users interactions with the app. Smart, reusable components were used across the board to allow new features to be pushed regularly.",
+        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "JSON",
+        "externalLinks": null,
+        "url": "beautifulyou",
+        "fwImg": "angular.svg",
+        "imgUrl": "beautifulyou.jpg"
+    },
+        {
+        "key": 1,
+        "title": "Health Coach",
+        "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle. This included a dashboard where users were able to track and monitor their exercise, nutrition and medication along with regularly updated content and relevant articles.",
+        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "Webpack", "SCSS"],
+        "api": "RESTful",
+        "externalLinks": null,
+        "url": "hc-customer",
+        "fwImg": "angular.svg",
+        "imgUrl": "customer.jpg"
     },
     {
         "key": 5,
@@ -17,7 +40,8 @@
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "dfa",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "imgUrl": "dfa.jpg"
     },
     {
         "key": 7,
@@ -27,7 +51,8 @@
         "api": "RESTful",
         "externalLinks": "http://www.pwc.co.uk/forms/digital-learning-digital-fitness-assessment-app.html",
         "url": "totemcms",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "imgUrl": "totem-cms.jpg"
     },
     {
         "key": 8,
@@ -37,7 +62,8 @@
         "api": "RESTful",
         "externalLinks": null,
         "url": "totemtv",
-        "fwImg": "react.svg"
+        "fwImg": "react.svg",
+        "imgUrl": "totem-tv.jpg"
     },
     {
         "key": 9,
@@ -47,7 +73,8 @@
         "api": "RESTful",
         "externalLinks": "https://www.totem.team",
         "url": "totem",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "imgUrl": "totem.jpg"
     },
     {
         "key": 10,
@@ -57,47 +84,19 @@
         "api": "RESTful",
         "externalLinks": "https://www.play-consult.co.uk",
         "url": "play",
-        "fwImg": "react.svg"
-    },
-    {
-        "key": 1,
-        "title": "Health Coach",
-        "description": "Customer facing app used by patients suffering from type 2 diabetes. The aim was to assist and educate users on how to manage their condition through healthy eating and an active lifestyle. This included a dashboard where users were able to track and monitor their exercise, nutrition and medication along with regularly updated content and relevant articles.",
-        "framework": ["AngularJS 1.5", "D3", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "RESTful",
-        "externalLinks": null,
-        "url": "hc-customer",
-        "fwImg": "angular.svg"
+        "fwImg": "react.svg",
+        "imgUrl": "play.jpg"
     },
     {
         "key": 2,
-        "title": "Health Coach Signup",
-        "description": "Customer facing app that allowed customers to book an appointment with their local pharmacist to enroll on the health coach program. Users were able to search for their nearest store, send basic information and re-arrange appointments.",
+        "title": "Health Coach Consultation",
+        "description": "Pharmacist facing app allowing registered customers to enroll on the health coach programme. The purpose of the app was to capture all of the customers health related data through a series of steps and provide real time feedback on actions that must be taken to improve their health. This included suggested levels of exercise, eating habits and lifestyle changes to ease customers into the programme.",
         "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
         "api": "RESTful",
         "externalLinks": null,
-        "url": "hc-signup",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 3,
-        "title": "Health Coach Colleague",
-        "description": "Pharmacist facing app that was used to capture patients lifestyle, fitness and medical records to ensure they met the criteria to enroll on health coach. The user journey was dynamically driven by the information provided by patients during their consultation.",
-        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "RESTful",
-        "externalLinks": null,
-        "url": "hc-colleague",
-        "fwImg": "angular.svg"
-    },
-    {
-        "key": 4,
-        "title": "Beautiful You",
-        "description": "SPA used by Boots customers on large touch panels to browse and purchase targeted products based on the users interactions with the app. Smart, reusable components were used across the board to allow new features to be pushed regularly.",
-        "framework": ["AngularJS 1.5", "ES6", "Javascript", "Webpack", "SCSS"],
-        "api": "JSON",
-        "externalLinks": null,
-        "url": "beautifulyou",
-        "fwImg": "angular.svg"
+        "url": "hc-consultation",
+        "fwImg": "angular.svg",
+        "imgUrl": "consultation.jpg"
     },
     {
         "key": 11,
@@ -107,6 +106,7 @@
         "api": "RESTful",
         "externalLinks": "https://www.plantstove.com",
         "url": "plantstove",
-        "fwImg": "angular.svg"
+        "fwImg": "angular.svg",
+        "imgUrl": "plantstove.jpg"
     }
 ]

@@ -1,25 +1,22 @@
 .image {
-    height: 400px;
     width: 700px;
     display: inline-table;
-    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 
     @include media('<desktop') {
         width: 450px;
-        height: 250px;
     }
 
     @include media('<tablet') {
         width: 400px;
-        height: 200px;
     }
 
     @include media('<phone') {
-      width: 350px;
+        width: 100%;
     }
 
     @media (max-width: 320px) {
-      width: 280px;
+      width: 100%;
     }
 }
 
