@@ -6,7 +6,7 @@
     position: fixed;
     top: 0px;
     z-index: 100;
-    background-color: #1f2124;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     @include media('<desktop') {
         // border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -35,7 +35,7 @@
 
 .navbar-desktop-wrapper {
     // position: fixed;
-    padding: 20px;
+    padding: 40px 20px 0 20px;
     right: 0;
     width: 595px;
     @include media('<desktop') {
@@ -52,7 +52,7 @@
             text-decoration: none;
             color: #bdbdbd;
             // text-transform: uppercase;
-            font-size: 15px;
+            font-size: 13px;
             color: #545555;
             transition: all 0.3s ease;
             &:hover {
@@ -70,14 +70,15 @@
     .indicator-wrapper {
         position: relative;
         width: 100%;
-        padding-top: 5px;
 
         .indicator {
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
+            bottom: -11px;
             border-radius: 50px;
+            // border: 2px solid rgba(255, 255, 255, 0.2);
             position: absolute;
-            background-color: #fff;
+            background-color: #ababab;
             transition: all 0.3s ease;
         }
     }
