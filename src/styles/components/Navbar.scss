@@ -53,7 +53,7 @@
             text-decoration: none;
             color: #bdbdbd;
             // text-transform: uppercase;
-            font-size: 13px;
+            font-size: 13.5px;
             color: #545555;
             transition: all 0.3s ease;
             &:hover {
@@ -75,11 +75,11 @@
         .indicator {
             width: 6px;
             height: 6px;
-            bottom: -11px;
+            bottom: -10px;
             border-radius: 50px;
             // border: 2px solid rgba(255, 255, 255, 0.2);
             position: absolute;
-            background-color: #ababab;
+            background-color: #cecece;
             transition: all 0.3s ease;
         }
     }
