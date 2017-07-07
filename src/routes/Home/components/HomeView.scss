@@ -31,8 +31,24 @@ h4 {
     padding-top: 0px;
   }
 
+  .location {
+    margin: 20px 0 20px 0;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    h5 {
+      margin: 0;
+    }
+  }
+
   h4 {
-    margin: 10px 0 50px 0;
+    margin: 10px 0 20px 0;
   }
 
   p {
@@ -55,7 +71,7 @@ h4 {
   align-items: center;
   width: 80%;
   height: 50px;
-  padding-top: 60px;
+  margin-top: 60px;
 
   @include media('height<landscape') {
     margin-bottom: 50px;
