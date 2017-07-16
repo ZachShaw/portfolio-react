@@ -6,7 +6,7 @@
   text-align: left;
 
   @include media('height<landscape') {
-      padding-top: 2rem;
+      padding-top: 1rem;
   }
 }
 
