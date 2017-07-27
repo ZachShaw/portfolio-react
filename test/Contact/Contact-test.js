@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import Contact from '../src/routes/Contact/components/Contact'
+import Contact from '../../src/routes/Contact/components/Contact'
 
 describe("A suite", () => {
   it("should testttt", () => {
@@ -11,7 +11,7 @@ describe("A suite", () => {
 
   it("should work  with a component", () => {
     const wrapper = shallow(<Contact />);
-    const expected = wrapper.containsMatchingElement(<p>what!</p>);
+    const expected = wrapper.containsMatchingElement(<h2>Contact</h2>);
     expect(expected).to.eq(true);
   });
 });

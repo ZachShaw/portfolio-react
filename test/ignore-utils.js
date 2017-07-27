@@ -1,4 +1,4 @@
-import requireHacker from 'require-hacker'
+const requireHacker = require('require-hacker')
 
 const extensions = ['scss', 'gif', 'jpg', 'svg', 'css', 'png']
 
