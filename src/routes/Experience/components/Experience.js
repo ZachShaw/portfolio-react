@@ -7,7 +7,7 @@ export const Experience = ({}) => {
     <div className="experience-container">
       <h2 style={{ marginBottom: '30px'}} className="headerFadeIn">Experience</h2>
       <div className="animated animated-1 experience-wrapper">
-        <h5>Front End Engineer</h5>
+        <h5>Lead Front End Engineer</h5>
         <p>Where: Play, August 2016 - Present</p>
         <p>Building and maintaining multiple SPA's using both AngularJS and React combined with Redux. This includes a forensic accounting themed game, digital assessment platform, static pages, CMS's plus more. Owning and maintaining repositories, release cycles and automated deployments with CI. All projects are built with or upgraded to component based ES6 architecture.
         </p>
