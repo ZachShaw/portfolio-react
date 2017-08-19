@@ -11,7 +11,7 @@ export const HomeView = () => (
       <div className="location">
         <img className="back" src={require(`../../../assets/images/location.svg`)} /><h5>London</h5>
       </div>
-      <p>React, AngularJS, Redux, JavaScript (ES6), REST, webpack2, Sass, Less, Stylus, yarn, npm, webpack, pug, Chai, jQuery, AWS, Heroku, Semaphore CI, Google Analytics, JIRA, Confluence, Material</p>
+      <p>React, AngularJS, Redux, JavaScript (ES6), REST, webpack2, Sass, Less, Stylus, yarn, npm, webpack, pug, mocha, jQuery, AWS, Heroku, Bitbucket Pipelines, Semaphore CI, Google Analytics, JIRA, Confluence, Material</p>
       <div className="btn-container">
         <Link to="/projects"><div className="btn">Projects</div></Link>
         <Link to="/experience"><div className="btn">Experience</div></Link>
